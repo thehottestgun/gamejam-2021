@@ -9,5 +9,11 @@ public static class PlayerStats
     public static int cans = 0;
     public static int superPower = 0;
     
-    
+    public static void StatReset()
+    {
+        name = "";
+        playerHp = 3;
+        cans = 0;
+        superPower = 0;
+    }
 }
