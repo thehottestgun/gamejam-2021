@@ -16,12 +16,10 @@ public class GameEventSystem : MonoBehaviour
             Destroy(gameObject);
     }
 
-    //public Action<>();
+
+    public event Action OnPlayerDead;
     
-    public void PlayerAddCan(int can)
-    {
-        
-    }
+    
 
     void Start()
     {
