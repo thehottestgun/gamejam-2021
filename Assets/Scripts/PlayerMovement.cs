@@ -7,12 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 3.0f, jumpForce = 5.0f;
     private Rigidbody2D _rigidbody;
+    private SpriteRenderer _sprite;
 
     private bool _canJump = true;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,8 +32,8 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         var xDisplacement = Input.GetAxis("Horizontal");
-        Debug.Log(xDisplacement);
         var yDisplacement = Input.GetAxis("Vertical");
+        _sprite.flipX = xDisplacement < 0;
         _rigidbody.velocity = new Vector2(xDisplacement * speed, _rigidbody.velocity.y);
     }
 
