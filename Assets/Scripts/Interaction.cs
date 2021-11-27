@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    private bool _inRange;
+    internal bool _inRange;
 
     protected virtual void Interact()
     {
@@ -17,6 +17,7 @@ public class Interaction : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        Debug.Log("In range");
         if (other.CompareTag("Player"))
             _inRange = true;
         
