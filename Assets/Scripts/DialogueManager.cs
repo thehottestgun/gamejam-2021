@@ -37,17 +37,19 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        _dialogueBoxAnimator.SetBool("InDialogue",true);
+        
         Debug.Log("Starting conversation with " + dialogue.playerName);
+        
         _inDialogue = true;
         
         _sentences.Clear();
-
+        
         foreach (var sentence in dialogue.sentences)
         {
             _sentences.Enqueue(sentence);
         }
-
+        Debug.Log(dialogue.sentences[0]);
+        _dialogueBoxAnimator.SetBool("InDialogue",true);
         DisplayNextSentence();
     }
 
@@ -59,7 +61,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue(name);
             return;
         }
-
+       
         var sentence = _sentences.Dequeue();
         _dialogueBox.text = PlayerStats.name + "\n" + sentence;
         Debug.Log(sentence);
