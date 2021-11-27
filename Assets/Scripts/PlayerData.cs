@@ -3,5 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour {
+    
     public static int cans = 0;
 }
