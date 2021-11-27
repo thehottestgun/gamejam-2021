@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _canJump = true;
     private Animator _playerAnimator;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -20,48 +20,28 @@ public class PlayerMovement : MonoBehaviour
         _playerAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
-        if(PlayerStats.playerHp < 1)
+        // gdy HP gracza spadnie do 0
+        if (PlayerStats.playerHp < 1)
         { 
-            resetGame = true;
-            // Debug.Log("OOPS!");
+            // Debug.Log("DEATH!");
             _playerAnimator.SetTrigger("Death");
-     
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static; // aby sie nie ruszac
             StartCoroutine(WaitForSeconds(3));
         }
     }
 
-    bool resetGame = false;
-bool canTakeDamage = true;
-
-private void OnCollisionStay2D(Collision2D collision)
-{
-    if (collision.gameObject.CompareTag("Enemy"))
+    IEnumerator WaitForSeconds(int x)
     {
-        if (canTakeDamage && !resetGame)
-        {
-            StartCoroutine(WaitForSeconds(1));
-            UIUpdate.instance.SetHp(PlayerStats.playerHp);
-                //Debug.Log("HIT!");
-            }
+        yield return new WaitForSecondsRealtime(x);
+
+        PlayerStats.StatReset();
+        SceneManager.LoadScene(0);
     }
-}
 
-IEnumerator WaitForSeconds(int x)
-{
-    canTakeDamage = false;
-    yield return new WaitForSecondsRealtime(x);
-    canTakeDamage = true;
-    if (resetGame)
-    {
-        SceneManager.LoadScene("Game");
-
-
-        private void FixedUpdate()
+    private void FixedUpdate()
     {
         Move();
         Jump();

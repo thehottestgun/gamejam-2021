@@ -10,6 +10,8 @@ public class UIUpdate : MonoBehaviour
     public TMPro.TMP_Text cans;
     public TMPro.TMP_Text endInfo;
 
+    public GameObject panel;
+
     public void Awake()
     {
         if(instance == null)
@@ -25,14 +27,18 @@ public class UIUpdate : MonoBehaviour
     {
         hp.text = PlayerStats.playerHp.ToString();
         cans.text = PlayerStats.cans.ToString();
+        endInfo.text = "";
+        panel.SetActive(false);
     }
 
     public void SetHp(int number)
     {
         hp.text = number.ToString();
-        if(number < 1)
+        
+        if (number < 1)
         {
-            endInfo.text = "GAME OVER";
+            panel.SetActive(true);
+            endInfo.text = "LMAO YOU DIED XDDD";
         }
     }
 
