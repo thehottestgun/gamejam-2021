@@ -12,7 +12,9 @@ public class DialogueManager : MonoBehaviour
 
     private TextMeshProUGUI _dialogueBox;
 
-    private Animator _dialogueBoxAnimator;
+    private Animator _dialogueBoxAnimator, _faderAnimator;
+
+    private bool finalDialouge;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class DialogueManager : MonoBehaviour
         _inDialogue = false;
         _dialogueBoxAnimator = GameObject.Find("Dialogue Box").GetComponent<Animator>();
         _dialogueBox = GameObject.Find("Dialogue Box").transform.GetComponentInChildren<TextMeshProUGUI>();
+        _faderAnimator = GameObject.Find("Fader").GetComponent<Animator>();
         Debug.Log(_dialogueBox.text);
     }
 
@@ -36,7 +39,7 @@ public class DialogueManager : MonoBehaviour
     {
         _dialogueBoxAnimator.SetBool("InDialogue",true);
         Debug.Log("Starting conversation with " + dialogue.name);
-
+        finalDialouge = dialogue.name == "final";
         _inDialogue = true;
         
         _sentences.Clear();
@@ -54,7 +57,7 @@ public class DialogueManager : MonoBehaviour
         if (_sentences.Count == 0)
         {
             _inDialogue = false;
-            EndDialogue();
+            EndDialogue(name);
             return;
         }
 
@@ -63,10 +66,16 @@ public class DialogueManager : MonoBehaviour
         Debug.Log(sentence);
     }
 
-    void EndDialogue()
+    void EndDialogue(string name)
     {
         _dialogueBoxAnimator.SetBool("InDialogue",false);
         _dialogueBox.text = "";
+        if (finalDialouge)
+        {
+            FaderSceneProgress.progressToNextScene = true;
+            _faderAnimator.SetBool("Fading",true);
+        }
+        
         Debug.Log("End of conversation.");
     }
 }
