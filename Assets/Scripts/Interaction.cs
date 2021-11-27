@@ -9,7 +9,7 @@ public class Interaction : MonoBehaviour
 
     protected virtual void Interact()
     {
-        if (_inRange && Input.GetButton("Interaction"))
+        if (_inRange && Input.GetButtonDown("Interaction"))
         {
             Debug.Log("Interacted");
         }  
