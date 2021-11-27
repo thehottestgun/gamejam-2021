@@ -805,12 +805,12 @@ PrefabInstance:
     - target: {fileID: 2533056105739281922, guid: f2db7269a108a4bd3a06757de8d6b340,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.02
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 2533056105739281922, guid: f2db7269a108a4bd3a06757de8d6b340,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.86
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 2533056105739281922, guid: f2db7269a108a4bd3a06757de8d6b340,
         type: 3}
@@ -886,12 +886,12 @@ PrefabInstance:
     - target: {fileID: 3923759834878432172, guid: a3ab0797364da4f4882a378e0c2f265b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.77
+      value: 14.14
       objectReference: {fileID: 0}
     - target: {fileID: 3923759834878432172, guid: a3ab0797364da4f4882a378e0c2f265b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 3923759834878432172, guid: a3ab0797364da4f4882a378e0c2f265b,
         type: 3}
@@ -1552,9 +1552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
     sentences:
-    - "Jedyny pi\u0119ciogwiazdkowy apartament w tej dziurze."
-  clip:
-  - {fileID: 0}
+    - "Jedyny pi\u0119ciogwiazdkowy apartament w tej diurze."
+  clip: []
 --- !u!61 &1084059558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1807,8 +1806,7 @@ MonoBehaviour:
     sentences:
     - "Ech, i co? Mam siedzie\u0107 i wdycha\u0107 warszawski smog? Nied\u0142ugo
       zamykaj\u0105 Ropuch\u0119."
-  clip:
-  - {fileID: 0}
+  clip: []
 --- !u!61 &1202005273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2294,12 +2292,12 @@ PrefabInstance:
     - target: {fileID: 4078016953144197030, guid: 26cb26e1b31ab42f6beee9b1fc072bfe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.51
+      value: 3.44
       objectReference: {fileID: 0}
     - target: {fileID: 4078016953144197030, guid: 26cb26e1b31ab42f6beee9b1fc072bfe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.88
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: 4078016953144197030, guid: 26cb26e1b31ab42f6beee9b1fc072bfe,
         type: 3}
@@ -3255,8 +3253,7 @@ MonoBehaviour:
   Dialogue:
     sentences:
     - PLACEHOLDER
-  clip:
-  - {fileID: 0}
+  clip: []
 --- !u!61 &2099503774
 BoxCollider2D:
   m_ObjectHideFlags: 0
