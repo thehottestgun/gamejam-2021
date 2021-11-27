@@ -66,6 +66,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         _dialogueBoxAnimator.SetBool("InDialogue",false);
+        _dialogueBox.text = "";
         Debug.Log("End of conversation.");
     }
 }

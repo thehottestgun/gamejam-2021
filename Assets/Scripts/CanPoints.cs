@@ -8,8 +8,8 @@ public class CanPoints : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerData.cans++;
-            UIUpdate.instance.SetCans(PlayerData.cans);
+            PlayerStats.cans++;
+            UIUpdate.instance.SetCans(PlayerStats.cans);
             Destroy(gameObject);
         }
     }
