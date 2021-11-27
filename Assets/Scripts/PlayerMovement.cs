@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log("DEATH!");
             _playerAnimator.SetTrigger("Death");
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static; // aby sie nie ruszac
-            StartCoroutine(WaitForSeconds(3));
+            StartCoroutine(WaitForSeconds(1));
         }
     }
 
@@ -79,8 +79,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        _canJump = true;
-    }
 }
