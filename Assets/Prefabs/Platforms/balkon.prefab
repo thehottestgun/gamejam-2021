@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4090814347833004977}
   - component: {fileID: 8823633357253314556}
   m_Layer: 10
-  m_Name: platforma_balkon_krata
+  m_Name: balkon
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

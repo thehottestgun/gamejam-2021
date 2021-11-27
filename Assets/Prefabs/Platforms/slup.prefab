@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1984305960862121524}
   - component: {fileID: -2041605526940033638}
   m_Layer: 10
-  m_Name: platforma_slupek
+  m_Name: slup
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
