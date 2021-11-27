@@ -13,8 +13,8 @@ public class EnemyLogic : MonoBehaviour
     private SpriteRenderer _sr;
 
     private Animator _an;
-    //private bool _inAir;
-    public int jumpForce;
+    private bool _isNotAttacking;
+    
     public int speed;
     public int enemyRangeX;
     public int enemyRangeY;
@@ -26,8 +26,7 @@ public class EnemyLogic : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         _an = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        
-        //_inAir = false;
+        _isNotAttacking = true;
         _enemy = gameObject.transform;
         
     }
@@ -40,7 +39,7 @@ public class EnemyLogic : MonoBehaviour
 
     private void Chase()
     {
-        if (Math.Abs(_player.position.x - _enemy.position.x) < enemyRangeX || Math.Abs(_player.position.y - _enemy.position.y) < enemyRangeY)
+        if ((Math.Abs(_player.position.x - _enemy.position.x) < enemyRangeX || Math.Abs(_player.position.y - _enemy.position.y) < enemyRangeY)&&_isNotAttacking)
         {
             _an.SetFloat("Speed",speed);
             Debug.Log("Enemy Chase");
@@ -60,22 +59,18 @@ public class EnemyLogic : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            _isNotAttacking = false;
             _an.SetBool("CanAttack",true);
-            Debug.Log("Player Get Damage");
         }
 
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            //_inAir = false;
-        }
+        
     }
-
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            _isNotAttacking = true;
             _an.SetBool("CanAttack",false);
         }
-
     }
 }
