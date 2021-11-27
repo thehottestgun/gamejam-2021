@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
 
     [SerializeField] private TMPro.TMP_InputField playerName;
     private bool isNameOK = false;
+    private bool isToggleOn = false;
     [SerializeField] private Toggle toggle;
     [SerializeField] private Button buttonStart;
 
@@ -65,17 +66,34 @@ public class Menu : MonoBehaviour
             isNameOK = true;
         }
 
-
+        ButtonLogic();
     }
 
     public void ToggleLogic()
     {
-        if (toggle.isOn && isNameOK)
+        Debug.Log("tutaj");
+        if (toggle.isOn)
         {
-            buttonStart.interactable = true;
+            isToggleOn = true;
         }
         else
         {
+            isToggleOn = false;
+        }
+
+        ButtonLogic();
+    }
+
+    public void ButtonLogic()
+    {
+        if (isToggleOn && isNameOK)
+        {
+            buttonStart.interactable = true;
+            Debug.Log("button on");
+        }
+        else
+        {
+            Debug.Log("button off");
             buttonStart.interactable = false;
         }
 
