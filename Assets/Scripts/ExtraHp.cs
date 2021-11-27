@@ -12,7 +12,7 @@ public class ExtraHp : MonoBehaviour
 
             UIUpdate.instance.SetHp(PlayerStats.playerHp);
             // placeholder na dzwiek
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 0.2f);
         }
     }
 }

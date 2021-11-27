@@ -21,7 +21,7 @@ public class CanPoints : MonoBehaviour
            
             
            UIUpdate.instance.SetCans(PlayerStats.cans);
-           Destroy(gameObject);
+           Destroy(gameObject, 0.2f);
         }
     }
 }
