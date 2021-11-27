@@ -11,13 +11,16 @@ public class EnemyLogic : MonoBehaviour
     private Transform _enemy;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
+    private bool _inAir;
     public int jumpForce;
     public int speed;
+    
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _sr = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
+        _inAir = false;
         _enemy = gameObject.transform;
         
     }
@@ -52,9 +55,9 @@ public class EnemyLogic : MonoBehaviour
             Debug.Log("Player Get Damage");
         }
 
-        if (other.gameObject.CompareTag("Wall")) // np gdy zbloczy się przy ściance niech na nią wskoczy
+        if (other.gameObject.CompareTag("Floor"))
         {
-            _rb.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
+            _inAir = false;
         }
     }
 }
