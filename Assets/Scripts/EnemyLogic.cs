@@ -11,7 +11,7 @@ public class EnemyLogic : MonoBehaviour
     private Transform _enemy;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
-    private bool _inAir;
+    //private bool _inAir;
     public int jumpForce;
     public int speed;
     
@@ -20,7 +20,7 @@ public class EnemyLogic : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _sr = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
-        _inAir = false;
+        //_inAir = false;
         _enemy = gameObject.transform;
         
     }
@@ -57,7 +57,7 @@ public class EnemyLogic : MonoBehaviour
 
         if (other.gameObject.CompareTag("Floor"))
         {
-            _inAir = false;
+            //_inAir = false;
         }
     }
 }

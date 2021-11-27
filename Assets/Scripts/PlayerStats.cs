@@ -8,4 +8,6 @@ public static class PlayerStats
     public static int playerHp = 3;
     public static int cans = 0;
     public static int superPower = 0;
+    
+    
 }
