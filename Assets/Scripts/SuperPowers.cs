@@ -34,15 +34,11 @@ public class SuperPowers : MonoBehaviour
         if (Input.GetButtonDown("SuperPower"))
         {
             if (_toogle==0)
-            {
-                Debug.Log("Start U");
                 StartCoroutine(ChangeUp());
-            }
+            
             if(_toogle==1)
-            {
-                Debug.Log("Start D");
                 StartCoroutine(ChangeDown());
-            }
+            
         }
     }
 
