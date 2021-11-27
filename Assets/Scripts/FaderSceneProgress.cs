@@ -19,11 +19,13 @@ public class FaderSceneProgress : MonoBehaviour
 {
     public static bool progressToNextScene;
     [SerializeField] private Scenes nextScene;
+    
 
     private void Start()
     {
         progressToNextScene = false;
         GetComponent<Animator>().SetBool("Fading",false);
+        
     }
 
     // Start is called before the first frame update
