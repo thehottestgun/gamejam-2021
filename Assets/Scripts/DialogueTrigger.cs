@@ -17,7 +17,7 @@ public class DialogueTrigger : Interaction
 
     protected override void Interact()
     {
-        if (!_inRange || !Input.GetButton("Interaction")) return;
+        if (!_inRange || !Input.GetButtonDown("Interaction")) return;
         Debug.Log("Oh boy");
         FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
 
