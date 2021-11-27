@@ -1308,8 +1308,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
     sentences:
-    - "Jedyny pi\u0119ciogwiazdkowy apartament w tej diurze."
-  clip: {fileID: 0}
+    - "Jedyny pi\u0119ciogwiazdkowy apartament w tej dziurze."
+  clip:
+  - {fileID: 0}
 --- !u!61 &1084059558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1358,71 +1359,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1306799340}
     m_Modifications:
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 291608774854042853, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
       propertyPath: m_text
@@ -1430,53 +1366,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
-      propertyPath: m_fontSize
-      value: 20
+      propertyPath: m_margin.w
+      value: 8.983353
       objectReference: {fileID: 0}
     - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
-      propertyPath: m_margin.w
-      value: -1.3669511
+      propertyPath: m_margin.x
+      value: 3.204132
       objectReference: {fileID: 0}
     - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
       propertyPath: m_margin.y
-      value: 1.7386531
+      value: 15.132862
       objectReference: {fileID: 0}
     - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
-      propertyPath: m_fontSizeBase
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920713287585467676, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 738.794
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920713287585467676, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 67.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920713287585467676, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920713287585467676, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.218
+      propertyPath: m_margin.z
+      value: 3.204132
       objectReference: {fileID: 0}
     - target: {fileID: 1920713287585467676, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 114.64999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2554938291119151428, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 144
       objectReference: {fileID: 0}
     - target: {fileID: 3655345768710420749, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
@@ -1493,11 +1404,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1306799339}
-    - target: {fileID: 7339410137668949734, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9129949395805509368, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
       propertyPath: m_RootOrder
@@ -1505,13 +1411,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129949395805509368, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 9129949395805509368, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9129949395805509368, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
@@ -1662,7 +1563,8 @@ MonoBehaviour:
     sentences:
     - "Ech, i co? Mam siedzie\u0107 i wdycha\u0107 warszawski smog? Nied\u0142ugo
       zamykaj\u0105 Ropuch\u0119."
-  clip: {fileID: 0}
+  clip:
+  - {fileID: 0}
 --- !u!61 &1202005273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2728,7 +2630,8 @@ MonoBehaviour:
   Dialogue:
     sentences:
     - PLACEHOLDER
-  clip: {fileID: 0}
+  clip:
+  - {fileID: 0}
 --- !u!61 &2099503774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2754,6 +2657,38 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.6794934, y: 9.03}
+  m_EdgeRadius: 0
+--- !u!1 &2126943513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 751921976741670131, guid: 9f37cf8d29a1f43ae82b48cd38ce0842,
+    type: 3}
+  m_PrefabInstance: {fileID: 751921975681923447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2126943518
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126943513}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.29, y: 1.2}
+    newSize: {x: 1.29, y: 1.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.29, y: 1.2}
   m_EdgeRadius: 0
 --- !u!1001 &751921975681923447
 PrefabInstance:
