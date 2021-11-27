@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _canJump = true;
     private Animator _playerAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +24,44 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
+        if(PlayerStats.playerHp < 1)
+        { 
+            resetGame = true;
+            // Debug.Log("OOPS!");
+            _playerAnimator.SetTrigger("Death");
+     
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static; // aby sie nie ruszac
+            StartCoroutine(WaitForSeconds(3));
+        }
     }
 
-    private void FixedUpdate()
+    bool resetGame = false;
+bool canTakeDamage = true;
+
+private void OnCollisionStay2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Enemy"))
+    {
+        if (canTakeDamage && !resetGame)
+        {
+            StartCoroutine(WaitForSeconds(1));
+            UIUpdate.instance.SetHp(PlayerStats.playerHp);
+                //Debug.Log("HIT!");
+            }
+    }
+}
+
+IEnumerator WaitForSeconds(int x)
+{
+    canTakeDamage = false;
+    yield return new WaitForSecondsRealtime(x);
+    canTakeDamage = true;
+    if (resetGame)
+    {
+        SceneManager.LoadScene("Game");
+
+
+        private void FixedUpdate()
     {
         Move();
         Jump();

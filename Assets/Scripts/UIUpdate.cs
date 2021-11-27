@@ -8,6 +8,7 @@ public class UIUpdate : MonoBehaviour
     public static UIUpdate instance;
     public TMPro.TMP_Text hp;
     public TMPro.TMP_Text cans;
+    public TMPro.TMP_Text endInfo;
 
     public void Awake()
     {
@@ -29,6 +30,10 @@ public class UIUpdate : MonoBehaviour
     public void SetHp(int number)
     {
         hp.text = number.ToString();
+        if(number < 1)
+        {
+            endInfo.text = "GAME OVER";
+        }
     }
 
     public void SetCans(int number)
