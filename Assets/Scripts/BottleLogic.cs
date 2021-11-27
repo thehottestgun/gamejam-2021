@@ -11,7 +11,10 @@ public class BottleLogic : MonoBehaviour
             PlayerStats.playerHp--;
             
             UIUpdate.instance.SetHp(PlayerStats.playerHp);
-            Destroy(gameObject);
+            // placeholder na dzwiek
+            Destroy(gameObject, 0.5f);
         }
     }
+
+
 }

@@ -8,7 +8,7 @@ enum Scenes
 {
     Apartment = 1,
     Neighbourhood = 2,
-    Metro = 3,
+    MetroRopucha = 3,
     MetroProper = 4,
     Krakow = 5,
     Farma = 6
@@ -22,6 +22,7 @@ public class FaderSceneProgress : MonoBehaviour
     private void Start()
     {
         progressToNextScene = false;
+        GetComponent<Animator>().SetBool("Fading",false);
     }
 
     // Start is called before the first frame update
