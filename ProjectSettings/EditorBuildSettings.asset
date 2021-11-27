@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_Osiedle.unity
     guid: 53ce0d3f3ad41453994cde6522c64b4c
   - enabled: 1
-    path: Assets/Scenes/Level_MetroRopucha.unity
-    guid: 80504d24aeb4de841b9d16c6e23b66e0
+    path: Assets/Scenes/Level_MetroRopucha_1.unity
+    guid: 33a7517b77d261b439fb18fdb7f8762d
+  - enabled: 1
+    path: Assets/Scenes/Level_MetroRopucha_2.unity
+    guid: 1f4af7aba95f0b94bb4ec6419f3f2cbc
   - enabled: 1
     path: Assets/Scenes/Level_Metro.unity
     guid: cd2d5c5cf9f85f444836417feb1d5a9a

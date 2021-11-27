@@ -10,17 +10,19 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer _sprite;
 
     private bool _canJump = true;
+    private Animator _playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _sprite = GetComponent<SpriteRenderer>();
+        _playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_canJump);
+
     }
 
     private void FixedUpdate()
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         var xDisplacement = Input.GetAxis("Horizontal");
+        _playerAnimator.SetFloat("speed",Math.Abs(xDisplacement));
         _sprite.flipX = xDisplacement < 0;
         _rigidbody.velocity = new Vector2(xDisplacement * speed, _rigidbody.velocity.y);
     }
