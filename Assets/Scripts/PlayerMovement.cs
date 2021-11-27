@@ -78,4 +78,9 @@ public class PlayerMovement : MonoBehaviour
             _canJump = false;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        _canJump = true;
+    }
 }
