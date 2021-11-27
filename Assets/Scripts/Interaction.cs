@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public abstract class Interaction : MonoBehaviour
 {
     private bool _inRange;
     // Start is called before the first frame update
