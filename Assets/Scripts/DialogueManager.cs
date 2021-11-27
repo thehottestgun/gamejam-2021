@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool _inDialogue;
 
-    private TextMeshProUGUI _dialogueBox;
+    private TMP_Text _dialogueBox;
 
     private Animator _dialogueBoxAnimator, _faderAnimator;
     
@@ -20,7 +20,8 @@ public class DialogueManager : MonoBehaviour
         _sentences = new Queue<string>();
         _inDialogue = false;
         _dialogueBoxAnimator = GameObject.Find("Dialogue Box").GetComponent<Animator>();
-        _dialogueBox = GameObject.Find("Dialogue Box").transform.GetComponentInChildren<TextMeshProUGUI>();
+        _dialogueBox = GameObject.Find("Dialogue Box").GetComponentInChildren<TextMeshProUGUI>();
+        
 
         Debug.Log(_dialogueBox.text);
     }
@@ -60,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         var sentence = _sentences.Dequeue();
-        _dialogueBox.text = sentence;
+        _dialogueBox.text = PlayerStats.name + "\n" + sentence;
         Debug.Log(sentence);
     }
 
