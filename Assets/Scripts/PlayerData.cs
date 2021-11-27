@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour {
+public static class PlayerData{
     public static int cans = 0;
+    public static int superPower = -1;
 }
