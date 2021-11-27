@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueTrigger : Interaction
 {
@@ -25,6 +26,13 @@ public class DialogueTrigger : Interaction
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (CompareTag("Money") && other.CompareTag("Player") && PlayerStats.cans == 1)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
+            if(!(clip.Length>0)) return;
+            AudioSource.PlayClipAtPoint(clip[0],transform.position,1);
+        }
+
+        if (CompareTag("Health") && SceneManager.GetActiveScene().buildIndex == 1)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
             if(!(clip.Length>0)) return;
