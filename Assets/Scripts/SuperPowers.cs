@@ -22,7 +22,7 @@ public class SuperPowers : MonoBehaviour
     void Update()
     {
         Invisible();
-        
+        Teleportation();
     }
 
     private void Invisible()
@@ -40,6 +40,11 @@ public class SuperPowers : MonoBehaviour
                 _toogle = true;
             }
         }
+    }
+
+    private void Teleportation()
+    {
+        
     }
 
 }
