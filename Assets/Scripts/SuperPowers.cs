@@ -8,50 +8,38 @@ public class SuperPowers : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private PostProcessVolume _postProcessVolume;
     private Vignette _vignette;
-    private IEnumerator _loop;
+    private bool _toogle;
+    
     
     void Start()
     {
         _postProcessVolume.profile.TryGetSettings(out _vignette);
-        _loop = Change();
-        
+        _toogle = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Invisible();
+        
     }
 
     private void Invisible()
     {
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("SuperPower"))
         {
-            StartCoroutine(_loop);
+            if (_toogle)
+            {
+                _vignette.intensity.value = 1; 
+                _toogle = false;
+            }
+            else
+            {
+                _vignette.intensity.value = 0; 
+                _toogle = true;
+            }
         }
     }
 
-    private IEnumerator Change()
-    {
-        float val = _vignette.intensity.value;
-        if (val == 0)
-        {
-            while (_vignette.intensity.value > 0)
-            {
-                _vignette.intensity.value-=0.1f;
-                yield return new WaitForSeconds(0.5f);
-            }
-            
-        }
-        else
-        {
-            while (_vignette.intensity.value < 1)
-            {
-                _vignette.intensity.value+=0.1f;
-                yield return new WaitForSeconds(0.5f);
-            }
-            
-        }
-        
-    }
 }
