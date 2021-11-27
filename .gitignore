@@ -25,6 +25,9 @@
 # Gradle cache directory
 .gradle/
 
+#Rider stuff
+./idea
+
 #macos files
 .DS_Store
 .vsconfig
