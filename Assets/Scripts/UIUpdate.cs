@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIUpdate : MonoBehaviour
 {
     public static UIUpdate instance;
+    public Text hp;
     public Text cans;
 
     public void Awake()
@@ -17,6 +18,11 @@ public class UIUpdate : MonoBehaviour
         else {
             Destroy(gameObject);
         }
+    }
+
+    public void SetHp(int number)
+    {
+        hp.text = number.ToString();
     }
 
     public void SetCans(int number)
