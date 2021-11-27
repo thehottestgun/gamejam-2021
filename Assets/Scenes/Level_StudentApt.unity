@@ -348,6 +348,7 @@ MonoBehaviour:
   Dialogue:
     sentences:
     - "No nie gadaj, znowu sko\u0144czy\u0142o si\u0119 mleko?"
+  clip: {fileID: 0}
 --- !u!61 &242885441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1524,11 +1525,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1971442969}
     m_Modifications:
-    - target: {fileID: 3655345768710420749, guid: 670985dccda473f41a703fecd9f05708,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4458743023350564942, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
       propertyPath: m_Name
