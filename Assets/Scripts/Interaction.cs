@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorLogic : MonoBehaviour
+public class Interaction : MonoBehaviour
 {
     private bool _inRange;
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class DoorLogic : MonoBehaviour
     {
         if (_inRange && Input.GetButton("Interaction"))
         {
-            Debug.Log("Door Open");
+            Debug.Log("Interacted");
         }
     }
 
