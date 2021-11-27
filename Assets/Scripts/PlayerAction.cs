@@ -30,21 +30,15 @@ public class PlayerAction : MonoBehaviour
     {
         var color = _sr.color;
         bool stop = false;
-        int iteracja = 0;
-        while (!stop)
+
+        for (int i = 1; i < 4; i++)
         {
-            _sr.color = new Color(color.r += 0.2f, color.g-= 0.2f, color.b-= 0.2f);
-            yield return new WaitForSeconds(0.1f);
-            iteracja++;
-            if (_sr.color.r >= 2)
-                stop = true;
+            _sr.color=Color.red;
+            yield return new WaitForSeconds(0.2f+(float)i/10);
+            _sr.color=Color.white;
+            yield return new WaitForSeconds(0.2f+(float)i/10);
         }
-        while (iteracja!=0)
-        {
-            _sr.color = new Color(color.r -= 0.2f, color.g+= 0.2f, color.b+= 0.2f);
-            yield return new WaitForSeconds(0.1f);
-            iteracja--;
-        }
+        
         StopCoroutine(ChangeColor());
     }
 }
