@@ -69,13 +69,20 @@ public class PlayerMovement : MonoBehaviour
         {
             _canJump = true;
         }
+
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
+
         if (other.gameObject.CompareTag("Floor"))
         {
             _canJump = false;
+        }
+
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            _canJump = true;
         }
     }
 
