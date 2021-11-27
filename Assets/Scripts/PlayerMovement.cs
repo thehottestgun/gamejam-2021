@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _canJump = true;
     private Animator _playerAnimator;
-    // Start is called before the first frame update
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -19,10 +20,25 @@ public class PlayerMovement : MonoBehaviour
         _playerAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        // gdy HP gracza spadnie do 0
+        if (PlayerStats.playerHp < 1)
+        { 
+            // Debug.Log("DEATH!");
+            _playerAnimator.SetTrigger("Death");
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static; // aby sie nie ruszac
+            StartCoroutine(WaitForSeconds(3));
+        }
+    }
+
+    IEnumerator WaitForSeconds(int x)
+    {
+        yield return new WaitForSecondsRealtime(x);
+
+        PlayerStats.StatReset();
+        SceneManager.LoadScene(0);
     }
 
     private void FixedUpdate()
@@ -61,5 +77,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _canJump = false;
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        _canJump = true;
     }
 }
