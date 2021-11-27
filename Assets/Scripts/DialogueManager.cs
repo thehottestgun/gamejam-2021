@@ -11,11 +11,14 @@ public class DialogueManager : MonoBehaviour
     private bool _inDialogue;
 
     private TextMeshProUGUI _dialogueBox;
+
+    private Animator _dialogueBoxAnimator;
     // Start is called before the first frame update
     void Start()
     {
         _sentences = new Queue<string>();
         _inDialogue = false;
+        _dialogueBoxAnimator = GameObject.Find("Dialogue Box").GetComponent<Animator>();
         _dialogueBox = GameObject.Find("Dialogue Box").transform.GetComponentInChildren<TextMeshProUGUI>();
         Debug.Log(_dialogueBox.text);
     }
@@ -31,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        _dialogueBoxAnimator.SetBool("InDialogue",true);
         Debug.Log("Starting conversation with " + dialogue.name);
 
         _inDialogue = true;
@@ -61,6 +65,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        _dialogueBoxAnimator.SetBool("InDialogue",false);
         Debug.Log("End of conversation.");
     }
 }
