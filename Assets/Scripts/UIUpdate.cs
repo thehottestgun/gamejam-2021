@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class UIUpdate : MonoBehaviour
 {
     public static UIUpdate instance;
-    public Text hp;
-    public Text cans;
+    public TMPro.TMP_Text hp;
+    public TMPro.TMP_Text cans;
 
     public void Awake()
     {
@@ -18,6 +18,12 @@ public class UIUpdate : MonoBehaviour
         else {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        hp.text = PlayerStats.playerHp.ToString();
+        cans.text = PlayerStats.cans.ToString();
     }
 
     public void SetHp(int number)
