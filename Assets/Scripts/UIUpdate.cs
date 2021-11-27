@@ -19,7 +19,7 @@ public class UIUpdate : MonoBehaviour
         }
     }
 
-    public void SetCoins(int number)
+    public void SetCans(int number)
     {
         cans.text = number.ToString();
     }

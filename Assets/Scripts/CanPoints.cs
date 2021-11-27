@@ -9,7 +9,7 @@ public class CanPoints : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerData.cans++;
-            UIUpdate.instance.SetCoins(PlayerData.cans);
+            UIUpdate.instance.SetCans(PlayerData.cans);
             Destroy(gameObject);
         }
     }
