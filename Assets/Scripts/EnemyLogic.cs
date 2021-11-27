@@ -14,6 +14,8 @@ public class EnemyLogic : MonoBehaviour
     //private bool _inAir;
     public int jumpForce;
     public int speed;
+    public int EnemyRangeX;
+    public int EnemyRangeY;
     
     void Start()
     {
@@ -33,7 +35,7 @@ public class EnemyLogic : MonoBehaviour
 
     private void Chase()
     {
-        if (Math.Abs(_player.position.x - _enemy.position.x) < 2 || Math.Abs(_player.position.y - _enemy.position.y) < 2)
+        if (Math.Abs(_player.position.x - _enemy.position.x) < EnemyRangeX || Math.Abs(_player.position.y - _enemy.position.y) < EnemyRangeY)
         {
             Debug.Log("Enemy Chase");
             if (_player.position.x > _enemy.position.x)
