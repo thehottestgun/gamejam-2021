@@ -8,10 +8,11 @@ enum Scenes
 {
     Apartment = 1,
     Neighbourhood = 2,
-    MetroRopucha = 3,
-    MetroProper = 4,
-    Krakow = 5,
-    Farma = 6
+    MetroRopucha1 = 3,
+    MetroRopucha2 = 4,
+    MetroProper = 5,
+    Krakow = 6,
+    Farma = 7
 }
 
 public class FaderSceneProgress : MonoBehaviour
