@@ -21,8 +21,10 @@ public class SuperPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invisible();
-        Teleportation();
+        if(PlayerData.superPower==1) // Level 1
+            Invisible();
+        if(PlayerData.superPower==2) // Level 2
+            Teleportation();
     }
 
     private void Invisible()

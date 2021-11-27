@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         var xDisplacement = Input.GetAxis("Horizontal");
-        var yDisplacement = Input.GetAxis("Vertical");
         _sprite.flipX = xDisplacement < 0;
         _rigidbody.velocity = new Vector2(xDisplacement * speed, _rigidbody.velocity.y);
     }
