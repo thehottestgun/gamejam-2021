@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -8,11 +9,15 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> _sentences;
 
     private bool _inDialogue;
+
+    private TextMeshProUGUI _dialogueBox;
     // Start is called before the first frame update
     void Start()
     {
         _sentences = new Queue<string>();
         _inDialogue = false;
+        _dialogueBox = GameObject.Find("Dialogue Box").transform.GetComponentInChildren<TextMeshProUGUI>();
+        Debug.Log(_dialogueBox.text);
     }
 
     private void Update()
@@ -50,7 +55,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         var sentence = _sentences.Dequeue();
-        
+        _dialogueBox.text = sentence;
         Debug.Log(sentence);
     }
 
