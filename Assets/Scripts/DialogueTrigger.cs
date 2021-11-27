@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,7 +33,7 @@ public class DialogueTrigger : Interaction
             AudioSource.PlayClipAtPoint(clip[0],transform.position,1);
         }
 
-        if (CompareTag("Health") && SceneManager.GetActiveScene().buildIndex == 1)
+        if (CompareTag("Health") && SceneManager.GetActiveScene().buildIndex == 2)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
             if(!(clip.Length>0)) return;
@@ -46,7 +47,7 @@ public class DialogueTrigger : Interaction
         if (other.CompareTag("Player") && _dialogueBox.GetComponent<SpriteRenderer>().color.a >0)
         {
             _dialogueBox.GetComponent<Animator>().SetBool("InDialogue",false);
-            
+            _dialogueBox.GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
         _inRange = false;
     }
