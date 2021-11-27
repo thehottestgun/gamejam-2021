@@ -11,7 +11,7 @@ public class Interaction : MonoBehaviour
     {
         if (_inRange && Input.GetButtonDown("Interaction"))
         {
-            Debug.Log("Interacted");
+            
         }  
     }
 
