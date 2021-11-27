@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,12 @@ using UnityEngine;
 public class DialogueTrigger : Interaction
 {
     public Dialogue Dialogue;
+
+    private GameObject _dialogueManager;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Interact()
     {
-        
-    }
-
-    public override void Interact()
-    {
-        base.Interact();
+        FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     private bool _inRange;
-    
-    public virtual void Interact()
+
+    protected virtual void Interact()
     {
         if (_inRange && Input.GetButton("Interaction"))
         {
