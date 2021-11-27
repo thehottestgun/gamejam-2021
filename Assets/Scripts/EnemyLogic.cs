@@ -9,11 +9,17 @@ public class EnemyLogic : MonoBehaviour
 
     private Transform _player;
     private Transform _enemy;
-    private Rigidbody2D _playerRb;
+    private Rigidbody2D _rb;
+    private SpriteRenderer _sr;
+    public int jumpForce;
+    public int speed;
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _sr = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
         _enemy = gameObject.transform;
+        
     }
 
     // Update is called once per frame
@@ -27,20 +33,28 @@ public class EnemyLogic : MonoBehaviour
         if (Math.Abs(_player.position.x - _enemy.position.x) < 2 || Math.Abs(_player.position.y - _enemy.position.y) < 2)
         {
             Debug.Log("Enemy Chase");
+            if (_player.position.x > _enemy.position.x)
+            {
+                _enemy.Translate(new Vector2(speed*Time.deltaTime,0));
+                _sr.flipX = false;
+            }
+            else
+            {
+                _enemy.Translate(new Vector2(-speed*Time.deltaTime,0));
+                _sr.flipX = true;
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (_player.position.x > _enemy.position.x)
-            {
-                Debug.Log("Player Get Damage");
-            }
-            else
-            {
-                Debug.Log("Player Get Damage");
-            }
+            Debug.Log("Player Get Damage");
+        }
+
+        if (other.gameObject.CompareTag("Wall")) // np gdy zbloczy się przy ściance niech na nią wskoczy
+        {
+            _rb.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
         }
     }
 }
