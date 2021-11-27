@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Enemy
   - Money
+  - Health
   layers:
   - Default
   - TransparentFX
