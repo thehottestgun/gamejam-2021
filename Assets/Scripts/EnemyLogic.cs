@@ -11,18 +11,22 @@ public class EnemyLogic : MonoBehaviour
     private Transform _enemy;
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
-    //private bool _inAir;
-    public int jumpForce;
+
+    private Animator _an;
+    private bool _isNotAttacking;
+    
     public int speed;
     public int enemyRangeX;
     public int enemyRangeY;
+    
     
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _sr = GetComponent<SpriteRenderer>();
+        _an = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        //_inAir = false;
+        _isNotAttacking = true;
         _enemy = gameObject.transform;
         
     }
@@ -35,18 +39,19 @@ public class EnemyLogic : MonoBehaviour
 
     private void Chase()
     {
-        if (Math.Abs(_player.position.x - _enemy.position.x) < enemyRangeX || Math.Abs(_player.position.y - _enemy.position.y) < enemyRangeY)
+        if ((Math.Abs(_player.position.x - _enemy.position.x) < enemyRangeX || Math.Abs(_player.position.y - _enemy.position.y) < enemyRangeY)&&_isNotAttacking)
         {
+            _an.SetFloat("Speed",speed);
             Debug.Log("Enemy Chase");
             if (_player.position.x > _enemy.position.x)
             {
                 _enemy.Translate(new Vector2(speed*Time.deltaTime,0));
-                _sr.flipX = false;
+                _sr.flipX = true;
             }
             else
             {
                 _enemy.Translate(new Vector2(-speed*Time.deltaTime,0));
-                _sr.flipX = true;
+                _sr.flipX = false;
             }
         }
     }
@@ -54,12 +59,18 @@ public class EnemyLogic : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player Get Damage");
+            _isNotAttacking = false;
+            _an.SetBool("CanAttack",true);
         }
 
-        if (other.gameObject.CompareTag("Floor"))
+        
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            //_inAir = false;
+            _isNotAttacking = true;
+            _an.SetBool("CanAttack",false);
         }
     }
 }
