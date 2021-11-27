@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class PlayerStats
 {
+    public static string name = " ";
     public static int cans = 0;
     public static int superPower = 0;
 }

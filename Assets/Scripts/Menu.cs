@@ -41,6 +41,7 @@ public class Menu : MonoBehaviour
     public void StartGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        PlayerStats.name = playerName.text;
     }
 
     public void EndGame()
