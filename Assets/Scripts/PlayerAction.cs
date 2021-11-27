@@ -28,17 +28,13 @@ public class PlayerAction : MonoBehaviour
     
     public IEnumerator ChangeColor()
     {
-        var color = _sr.color;
-        bool stop = false;
-
         for (int i = 1; i < 4; i++)
         {
             _sr.color=Color.red;
-            yield return new WaitForSeconds(0.2f+(float)i/10);
+            yield return new WaitForSeconds(0.1f+(float)i/10);
             _sr.color=Color.white;
-            yield return new WaitForSeconds(0.2f+(float)i/10);
+            yield return new WaitForSeconds(0.1f+(float)i/10);
         }
-        
         StopCoroutine(ChangeColor());
     }
 }
