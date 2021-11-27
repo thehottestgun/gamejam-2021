@@ -17,13 +17,13 @@ public class SuperPowers : MonoBehaviour
         _toogle = true;
 
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        if(PlayerData.superPower==1) // Level 1
+        if(PlayerStats.superPower==1) // Level 1
             Invisible();
-        if(PlayerData.superPower==2) // Level 2
+        if(PlayerStats.superPower==2) // Level 2
             Teleportation();
     }
 
