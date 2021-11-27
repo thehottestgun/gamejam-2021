@@ -19,10 +19,8 @@ public class DialogueTrigger : Interaction
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Picked up");
-        if (other.CompareTag("Player") && PlayerStats.cans == 1)
+        if (CompareTag("Money") && other.CompareTag("Player") && PlayerStats.cans == 1)
         {
-            Debug.Log("Conds");
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
             AudioSource.PlayClipAtPoint(clip,transform.position,1);
         }
