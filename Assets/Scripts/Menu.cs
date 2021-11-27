@@ -71,7 +71,6 @@ public class Menu : MonoBehaviour
 
     public void ToggleLogic()
     {
-        Debug.Log("tutaj");
         if (toggle.isOn)
         {
             isToggleOn = true;
@@ -89,11 +88,9 @@ public class Menu : MonoBehaviour
         if (isToggleOn && isNameOK)
         {
             buttonStart.interactable = true;
-            Debug.Log("button on");
         }
         else
         {
-            Debug.Log("button off");
             buttonStart.interactable = false;
         }
 
