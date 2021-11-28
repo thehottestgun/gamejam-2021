@@ -24,32 +24,20 @@ public class SuperPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerStats.superPower==1) // Level 1
-            Invisible();
-        if(PlayerStats.superPower==2) // Level 2
-            Teleportation();
-        if (_isInvisible)
+        if (Input.GetButtonDown("SuperPower"))
         {
-            
+            if(PlayerStats.superPower==1) // Level 1
+                Invisible();
+            else if (PlayerStats.superPower == 2) // Level 2
+                Teleportation();
+            else return;
         }
+        
     }
 
     private void Invisible()
     {
-        if (Input.GetButtonDown("SuperPower"))
-        {
-            if (_toogle==0)
-                StartCoroutine(ChangeUp());
-            
-            if(_toogle==1)
-                StartCoroutine(ChangeDown());
-            
-        }
-
-        if (_isInvisible)
-        {
-            
-        }
+        
     }
 
     public IEnumerator ChangeUp()
