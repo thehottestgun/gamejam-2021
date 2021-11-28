@@ -1551,6 +1551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
     - "Jedyny pi\u0119ciogwiazdkowy apartament w tej diurze."
   clip: []
@@ -1803,6 +1804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
     - "Ech, i co? Mam siedzie\u0107 i wdycha\u0107 warszawski smog? Nied\u0142ugo
       zamykaj\u0105 Ropuch\u0119."
@@ -2886,6 +2888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
     - "Naprawd\u0119? A\u017C tutaj? Co b\u0119dzie nast\u0119pne, dzia\u0142 mi\u0119sny?"
   clip: []
@@ -3251,8 +3254,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
-    - PLACEHOLDER
+    - "Nie wiem czy kogokolwiek kiedy\u015B powstrzyma\u0142..."
   clip: []
 --- !u!61 &2099503774
 BoxCollider2D:
