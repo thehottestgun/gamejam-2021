@@ -102,13 +102,15 @@ public class DialogueManager : MonoBehaviour
                 return;
             }
 
-            if (endGame && SceneManager.GetActiveScene().buildIndex == 1)
-            {
-                SceneManager.LoadScene(8);
-            }
+            
             
             FaderSceneProgress.progressToNextScene = true;
             GameObject.Find("Fader").GetComponent<Animator>().SetBool("Fading",true);
+        }
+        
+        if (endGame && SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneManager.LoadScene(8);
         }
         
         Debug.Log("End of conversation.");
