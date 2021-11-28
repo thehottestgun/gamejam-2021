@@ -46,7 +46,7 @@ public class SuperPowers : MonoBehaviour
             Invisible();
         if (PlayerStats.superPower == 2 && !_spActive)
             StartCoroutine("Teleportation");
-        
+
     }
 
     private void Invisible()
@@ -57,7 +57,7 @@ public class SuperPowers : MonoBehaviour
     public IEnumerator ChangeUp()
     {
         yield return new WaitForSecondsRealtime(3f);
-        while (_vignette.intensity.value<=0.7)
+        while (_vignette.intensity.value<=0.8)
         { 
             _vignette.intensity.value += vignetteSpeed; 
             yield return new WaitForSecondsRealtime(0.15f);
