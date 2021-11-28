@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,15 +10,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3.0f, jumpForce = 5.0f;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _sprite;
+    private Physics2D _ph;
     private bool _canJump = true;
     private Animator _playerAnimator;
     
     void Start()
     {
+        PlayerStats.isInvisible = false;
         _rigidbody = GetComponent<Rigidbody2D>();
         _sprite = GetComponent<SpriteRenderer>();
         _playerAnimator = GetComponent<Animator>();
     }
+    
 
     
     void Update()
@@ -76,6 +80,10 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("JestEnter");
             Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
         }
+        else
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
+        }
 
     }
 
@@ -85,6 +93,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("JestStay");
             Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
+        }
+        else
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
     }
 
@@ -102,9 +114,13 @@ public class PlayerMovement : MonoBehaviour
             _canJump = true;
             _playerAnimator.SetBool("inAir",false);
         }
-        if (other.gameObject.CompareTag("Enemy") && !PlayerStats.isInvisible)
+        if (other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
         {
             Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
+        }
+        else
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
     }
 
