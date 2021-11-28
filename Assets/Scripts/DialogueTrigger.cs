@@ -62,10 +62,10 @@ public class DialogueTrigger : Interaction
     protected override void Interact()
     {
         if (!_inRange || !Input.GetButtonDown("Interaction")) return;
-        if (DialogueManager.endGame)
+        if (DialogueManager.endGame && CompareTag("Fridge"))
         {
             Dialogue dialogue = new Dialogue();
-            dialogue.sentences = new[] {"No nie wierzę! Migdałowe?!"};
+            dialogue.sentences = new[] {"Ech, to był długi dzień. Pora na wyczekiwane kakao.", "No nie wierzę! Migdałowe?!"};
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             return;
         }
