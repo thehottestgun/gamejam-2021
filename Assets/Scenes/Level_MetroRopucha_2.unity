@@ -1342,13 +1342,14 @@ PrefabInstance:
     - target: {fileID: 1570070083824925675, guid: f6d0786ea87f950439b2120d6b04fe15,
         type: 3}
       propertyPath: Dialogue.sentences.Array.data[3]
-      value: "Nie czuj\u0119 si\u0119 zbyt dobrze, \u017Ce niby to tak mia\u0142o
-        by\u0107?"
+      value: "Go\u015Bciu, co\u015B jest nie tak, troch\u0119 mnie odklei\u0142o
+        od tych smako\u0142yk\xF3w."
       objectReference: {fileID: 0}
     - target: {fileID: 1570070083824925675, guid: f6d0786ea87f950439b2120d6b04fe15,
         type: 3}
       propertyPath: Dialogue.sentences.Array.data[4]
-      value: "Hehe, no nie wiem szefuniu, kto wie. Do nast\u0119pnego"
+      value: "Hehe, no to widz\u0119, \u017Ce posmakowa\u0142y. Do rych\u0142ego,
+        szefuniu"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d0786ea87f950439b2120d6b04fe15, type: 3}
