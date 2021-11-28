@@ -52,7 +52,7 @@ public class SuperPowers : MonoBehaviour
     public IEnumerator ChangeUp()
     {
         _toogle = -1;
-        while (_vignette.intensity.value<=1)
+        while (_vignette.intensity.value<=0.7)
         { 
             _vignette.intensity.value += vignetteSpeed; 
             yield return new WaitForSeconds(0.1f);
