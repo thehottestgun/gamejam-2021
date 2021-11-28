@@ -9,7 +9,7 @@ public static class PlayerStats
     public static int cans = 0;
     public static int superPower = 2;
     public static bool isInvisible = false;
-    
+    public static AudioClip tpClip;
     public static void StatReset()
     {
         name = "";
