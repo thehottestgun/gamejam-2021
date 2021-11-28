@@ -16,8 +16,8 @@ public class EnemyLogic : MonoBehaviour
     private bool _isNotAttacking;
     
     public int speed;
-    public int enemyRangeX;
-    public int enemyRangeY;
+    public float enemyRangeX;
+    public float enemyRangeY;
     
     
     void Start()
@@ -28,13 +28,23 @@ public class EnemyLogic : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _isNotAttacking = true;
         _enemy = gameObject.transform;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Chase();    
+        Chase();
+        IsPlayerVisible();
+    }
+
+    private void IsPlayerVisible()
+    {
+        if (!PlayerStats.isInvisible)
+        {
+            enemyRangeX = 0.5f;
+            enemyRangeY = 3;
+        }
+            
     }
 
     private void Chase()
