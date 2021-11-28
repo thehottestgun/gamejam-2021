@@ -71,6 +71,7 @@ public class DialogueTrigger : Interaction
 
     private void Shady_Metro()
     {
+        Debug.Log(PlayerStats.cans);
         if (PlayerStats.cans < 5)
         {
             Dialogue dialogue = new Dialogue();
