@@ -18,7 +18,7 @@ public class Interaction : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("In range");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") &&!CompareTag("Finish"))
         {
             GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = true;
             _inRange = true;

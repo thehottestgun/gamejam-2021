@@ -72,13 +72,28 @@ public class SuperPowers : MonoBehaviour
         _spActive = true;
         while (true)
         {
+            
+             yield return new WaitForSecondsRealtime(5.5f);
+            AudioSource.PlayClipAtPoint(Audio,transform.position,1);
+            transform.position = new Vector3(waypoints[6].transform.position.x, waypoints[6].transform.position.y,
+                transform.position.z);
             yield return new WaitForSecondsRealtime(5.5f);
             AudioSource.PlayClipAtPoint(Audio,transform.position,1);
-            System.Random rnd = new System.Random();
-            var randTarget = rnd.Next(0, waypoints.Length);
-
-            transform.position = new Vector3(waypoints[randTarget].transform.position.x,
-                waypoints[randTarget].transform.position.y, transform.position.z); 
+            transform.position = new Vector3(waypoints[7].transform.position.x, waypoints[7].transform.position.y,
+                transform.position.z);
+            yield return new WaitForSecondsRealtime(5.5f);
+            AudioSource.PlayClipAtPoint(Audio,transform.position,1);
+            transform.position = new Vector3(waypoints[2].transform.position.x, waypoints[2].transform.position.y,
+                transform.position.z);
+            yield return new WaitForSecondsRealtime(5.5f);
+            AudioSource.PlayClipAtPoint(Audio,transform.position,1);
+            transform.position = new Vector3(waypoints[5].transform.position.x, waypoints[5].transform.position.y,
+                transform.position.z);
+            // System.Random rnd = new System.Random();
+            // var randTarget = rnd.Next(0, waypoints.Length);
+            //
+            // transform.position = new Vector3(waypoints[randTarget].transform.position.x,
+            //     waypoints[randTarget].transform.position.y, transform.position.z); 
         }
         
     }
