@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3.0f, jumpForce = 5.0f;
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _sprite;
-
     private bool _canJump = true;
     private Animator _playerAnimator;
     
@@ -70,6 +69,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerAnimator.SetBool("inAir",false);
             _canJump = true;
+        }
+
+        if (other.gameObject.layer == 10 && PlayerStats.isInvisible)
+        {
+            Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(),gameObject.GetComponent<Collider>());
         }
 
     }

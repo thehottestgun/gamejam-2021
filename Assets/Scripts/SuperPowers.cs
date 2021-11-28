@@ -31,6 +31,7 @@ public class SuperPowers : MonoBehaviour
     {
         if (Input.GetButtonDown("SuperPower"))
         {
+            Invisible();
             if(PlayerStats.superPower==1) // Level 1
                 Invisible();
             else if (PlayerStats.superPower == 2) // Level 2
@@ -46,7 +47,6 @@ public class SuperPowers : MonoBehaviour
             StartCoroutine(ChangeUp());
         else
             StartCoroutine(ChangeDown());
-        
     }
 
     public IEnumerator ChangeUp()
