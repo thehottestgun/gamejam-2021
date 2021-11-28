@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5304809606399602624}
   - component: {fileID: 7408707563371086901}
   - component: {fileID: -2738647997549725088}
-  - component: {fileID: 834536416199433307}
   m_Layer: 9
   m_Name: Can
   m_TagString: Money
@@ -126,19 +125,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audio: {fileID: 8300000, guid: a1516c080c814e24ead20b17539d942d, type: 3}
---- !u!114 &834536416199433307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2525481107068862536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eda154422552994180c6120ec61fdcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogue:
-    sentences:
-    - "Wohoho, jeszcze 999 i b\u0119dzie na browara!"
-  clip: {fileID: 8300000, guid: 390616e209fd01746aeb67e33d88b2b4, type: 3}

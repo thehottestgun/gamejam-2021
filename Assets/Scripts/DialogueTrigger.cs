@@ -25,6 +25,8 @@ public class DialogueTrigger : Interaction
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        _inRange = true;
+        GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = true;
         if (CompareTag("Money") && other.CompareTag("Player") && PlayerStats.cans == 1 && SceneManager.GetActiveScene().buildIndex == 2)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
@@ -48,7 +50,7 @@ public class DialogueTrigger : Interaction
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        
+        GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = false;
         if (other.CompareTag("Player") && _dialogueBox.GetComponent<SpriteRenderer>().color.a >0)
         {
             _dialogueBox.GetComponent<Animator>().SetBool("InDialogue",false);

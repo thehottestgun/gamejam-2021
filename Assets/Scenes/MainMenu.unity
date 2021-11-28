@@ -322,7 +322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Insert your name'
+  m_text: Dej swe imie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2393,7 +2393,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0025177002, y: 0}
-  m_SizeDelta: {x: 949.57, y: 543.49}
+  m_SizeDelta: {x: 949.57, y: 758.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257456513
 MonoBehaviour:
@@ -2415,7 +2415,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' INSTRUCTIONS'
+  m_text: "<b>CO I JAK KLIKASZ: </b>\n<color=#FF0000> <- A | D -> </color> aby chyca\u0107
+    lewo prawo\n<color=#FF0000> SPACJA </color> na pot\u0119\u017Cne skoki\n<color=#FF0000>
+    F</color> interakcja z otoczeniem\n\nZbieraj super cenne <color=#FF0000> Roppuszki
+    </color>,  uwa\u017Caj na <color=#FF0000>szk\u0142o </color> i przekop\xF3we
+    od <color=#FF0000>Kundlix\xF3w</color>... \n\nPami\u0119taj by nie bra\u0107
+    cukierk\xF3w od obcych! Mog\u0105 powodowa\u0107 efekty niedo\u0107pania i inne
+    <color=#FF0000> supermoce </color> poza twoj\u0105\_kontrol\u0105\n\n...Twoj\u0105
+    misj\u0105.... <color=#0000FF>mleko</color>...."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
   m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
@@ -2479,7 +2486,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -0.00003056861}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2760,7 +2767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I LIKE MILK
+  m_text: "LUBIE MLECZKO ( \u0361\xB0 \u035C\u0296 \u0361\xB0)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
   m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
@@ -2794,8 +2801,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2824,7 +2831,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -115.71791, y: 6.943081, z: 0, w: 0}
+  m_margin: {x: -115.71791, y: 6.943081, z: -123.320526, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3011,8 +3018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -307, y: 123}
-  m_SizeDelta: {x: 849.57, y: 443.49}
+  m_AnchoredPosition: {x: -307, y: 15.489998}
+  m_SizeDelta: {x: 849.57, y: 658.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735347243
 MonoBehaviour:
@@ -3041,7 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
