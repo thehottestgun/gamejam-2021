@@ -15,6 +15,7 @@ public class SuperPowers : MonoBehaviour
     private SpriteRenderer _sr;
     [SerializeField] private GameObject[] waypoints;
     private bool _spActive;
+    public AudioClip Audio;
 
 
     private void OnEnable()
@@ -70,7 +71,8 @@ public class SuperPowers : MonoBehaviour
         _spActive = true;
         while (true)
         {
-            yield return new WaitForSecondsRealtime(4f);
+            yield return new WaitForSecondsRealtime(5.5f);
+            AudioSource.PlayClipAtPoint(Audio,transform.position,1);
             System.Random rnd = new System.Random();
             var randTarget = rnd.Next(0, waypoints.Length);
 
