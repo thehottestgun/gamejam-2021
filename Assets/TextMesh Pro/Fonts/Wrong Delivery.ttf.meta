@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f41176d6411194ae98a1e49552d1d71e
+guid: 4b6f4366e26d84934a0113bd8c12a3fa
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Platinum Sign Under
+  - Wrong Delivery
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
