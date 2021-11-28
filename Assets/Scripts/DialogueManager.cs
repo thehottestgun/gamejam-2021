@@ -102,8 +102,15 @@ public class DialogueManager : MonoBehaviour
                 return;
             }
 
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                if (PlayerStats.cans < 5) return;
+             
+                
+                PlayerStats.cans -= 5;
+                
+            }
 
-            if (PlayerStats.cans < 5) return;
             FaderSceneProgress.progressToNextScene = true;
             GameObject.Find("Fader").GetComponent<Animator>().SetBool("Fading",true);
         }
