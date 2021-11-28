@@ -42,7 +42,7 @@ public class EnemyLogic : MonoBehaviour
         if (!PlayerStats.isInvisible)
         {
             enemyRangeX = 0.5f;
-            enemyRangeY = 3;
+            enemyRangeY = 1;
         }
             
     }
