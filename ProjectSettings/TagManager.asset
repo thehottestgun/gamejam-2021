@@ -10,6 +10,9 @@ TagManager:
   - Money
   - Health
   - Shady
+  - Bulldog
+  - Doberman
+  - Music
   layers:
   - Default
   - TransparentFX
