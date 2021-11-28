@@ -5,9 +5,10 @@ using UnityEngine;
 public class SetPlayerPower : MonoBehaviour
 {
     // Start is called before the first frame update
+    public int superPowerNumber;
     void Start()
     {
-        PlayerStats.superPower = 1;
+        PlayerStats.superPower = superPowerNumber;
     }
 
     // Update is called once per frame
