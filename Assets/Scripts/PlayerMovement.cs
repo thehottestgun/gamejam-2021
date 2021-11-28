@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         if (!Input.GetButton("Jump") || !_canJump) return;
         Debug.Log("Jumping");
         _canJump = false;
+        _playerAnimator.SetBool("inAir",true);
         _rigidbody.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
     }
 
@@ -67,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     {   
         if (other.gameObject.CompareTag("Floor") && Math.Ceiling(other.GetContact(0).normal.y) == 1)
         {
+            _playerAnimator.SetBool("inAir",false);
             _canJump = true;
         }
 
@@ -78,11 +80,13 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Floor"))
         {
             _canJump = false;
+            _playerAnimator.SetBool("inAir",true);
         }
 
         if (other.gameObject.CompareTag("Obstacle"))
         {
             _canJump = true;
+            _playerAnimator.SetBool("inAir",false);
         }
     }
 

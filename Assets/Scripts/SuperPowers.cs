@@ -10,7 +10,7 @@ public class SuperPowers : MonoBehaviour
     private Vignette _vignette;
     public float vignetteSpeed;
     private int _toogle;
-    private bool _isInvisible;
+    public static bool _isInvisible;
   
 
 
@@ -41,6 +41,7 @@ public class SuperPowers : MonoBehaviour
             StartCoroutine(ChangeUp());
         else
             StartCoroutine(ChangeDown());
+        
     }
 
     public IEnumerator ChangeUp()
