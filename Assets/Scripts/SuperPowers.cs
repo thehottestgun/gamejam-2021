@@ -79,10 +79,6 @@ public class SuperPowers : MonoBehaviour
                 transform.position.z);
             yield return new WaitForSecondsRealtime(5.5f);
             AudioSource.PlayClipAtPoint(Audio,transform.position,1);
-            transform.position = new Vector3(waypoints[7].transform.position.x, waypoints[7].transform.position.y,
-                transform.position.z);
-            yield return new WaitForSecondsRealtime(5.5f);
-            AudioSource.PlayClipAtPoint(Audio,transform.position,1);
             transform.position = new Vector3(waypoints[2].transform.position.x, waypoints[2].transform.position.y,
                 transform.position.z);
             yield return new WaitForSecondsRealtime(5.5f);
@@ -97,7 +93,7 @@ public class SuperPowers : MonoBehaviour
         }
         
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Finish"))
