@@ -14,6 +14,7 @@ public class SuperPowers : MonoBehaviour
     public float vignetteSpeed;
     private int _toogle;
     private bool _isInvisible;
+    private SpriteRenderer _sr;
     [SerializeField] private GameObject[] waypoints;
 
   
@@ -24,17 +25,16 @@ public class SuperPowers : MonoBehaviour
         _postProcessVolume.profile.TryGetSettings(out _vignette);
         _toogle = 0;
         _isInvisible = false;
+        _sr = gameObject.GetComponent<SpriteRenderer>();
     }
     
     // Update is called once per frame
     void Update()
     {
+        Invisible();
         if (Input.GetButtonDown("SuperPower"))
         {
-            Invisible();
-            if(PlayerStats.superPower==1) // Level 1
-                Invisible();
-            else if (PlayerStats.superPower == 2) // Level 2
+            if (PlayerStats.superPower == 2) // Level 2
                 Teleportation();
             else return;
         }
@@ -43,8 +43,7 @@ public class SuperPowers : MonoBehaviour
 
     private void Invisible()
     {
-        if (_toogle == 0)
-            StartCoroutine(ChangeUp());
+        StartCoroutine(ChangeUp());
         // else
         //     StartCoroutine(ChangeDown());
     }
@@ -57,7 +56,7 @@ public class SuperPowers : MonoBehaviour
             _vignette.intensity.value += vignetteSpeed; 
             yield return new WaitForSeconds(0.1f);
         }
-        _toogle = 1;
+        _sr.color = new Color(_sr.color.r, _sr.color.g, _sr.color.b, 0.5f);
         PlayerStats.isInvisible = true;
         StopCoroutine(ChangeUp());
             
