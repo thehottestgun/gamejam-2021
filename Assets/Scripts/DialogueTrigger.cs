@@ -10,7 +10,6 @@ public class DialogueTrigger : Interaction
     public Dialogue Dialogue;
 
     private GameObject _dialogueManager, _dialogueBox;
-
     [SerializeField] private AudioClip[] clip;
     // Start is called before the first frame update
 
@@ -82,6 +81,7 @@ public class DialogueTrigger : Interaction
         else
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
+            
         }
     }
 
