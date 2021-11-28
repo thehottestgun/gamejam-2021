@@ -79,6 +79,11 @@ public class DialogueManager : MonoBehaviour
         _dialogueBoxAnimator.SetBool("InDialogue",false);
         _dialogueBox.text = "";
         _counter = 0;
+        if (name != null)
+        {
+            FaderSceneProgress.progressToNextScene = true;
+            GameObject.Find("Fader").GetComponent<Animator>().SetBool("Fading",true);
+        }
         Debug.Log("End of conversation.");
     }
 }
