@@ -13,7 +13,8 @@ public class DialogueManager : MonoBehaviour
     private TMP_Text _dialogueBox;
 
     private Animator _dialogueBoxAnimator, _faderAnimator;
-    
+    private string _nameToPass;
+    private int _counter = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,14 +32,14 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetButtonDown("Confirm") && _inDialogue)
         {
             Debug.Log(_sentences.Count);
-            DisplayNextSentence();
+            DisplayNextSentence(_nameToPass);
         }
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         
-        Debug.Log("Starting conversation with " + dialogue.playerName);
+        Debug.Log("Starting conversation with " + dialogue.NPCName);
         
         _inDialogue = true;
         
@@ -50,10 +51,11 @@ public class DialogueManager : MonoBehaviour
         }
         Debug.Log(dialogue.sentences[0]);
         _dialogueBoxAnimator.SetBool("InDialogue",true);
-        DisplayNextSentence();
+        _nameToPass = String.IsNullOrEmpty(dialogue.NPCName) ? null : dialogue.NPCName;
+        DisplayNextSentence(_nameToPass);
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence(string name)
     {
         if (_sentences.Count == 0)
         {
@@ -61,16 +63,22 @@ public class DialogueManager : MonoBehaviour
             EndDialogue(name);
             return;
         }
-       
+        
+        var currentName = PlayerStats.name;
+        if (name != null)
+        {
+             currentName = _counter % 2 != 0 ?  PlayerStats.name : name;
+        }
         var sentence = _sentences.Dequeue();
-        _dialogueBox.text = PlayerStats.name + "\n" + sentence;
-        Debug.Log(sentence);
+        _dialogueBox.text = "<b>" + currentName + "</b>" + "\n" + sentence;
+        _counter++;
     }
 
     void EndDialogue(string name)
     {
         _dialogueBoxAnimator.SetBool("InDialogue",false);
         _dialogueBox.text = "";
+        _counter = 0;
         Debug.Log("End of conversation.");
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine;
 public class Dialogue
 {
    [NonSerialized] public string playerName = PlayerStats.name;
+    public string NPCName;
     [TextArea(3,10)]
     public string[] sentences;
     
