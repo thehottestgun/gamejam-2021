@@ -16,6 +16,9 @@ public class DialogueManager : MonoBehaviour
     private Animator _dialogueBoxAnimator, _faderAnimator;
     private string _nameToPass;
     private int _counter = 0;
+
+    public static bool endGame;
+    [SerializeField] private AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,16 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log(_sentences.Count);
             DisplayNextSentence(_nameToPass);
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (endGame)
+        {
+            Dialogue dia = new Dialogue();
+            dia.sentences = new[] {"Jezus Maria, ja tylko chciałem kupić mleko."};
+            StartDialogue(dia);
         }
     }
 
@@ -84,11 +97,28 @@ public class DialogueManager : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 7)
             {
-               
+                endGame = true;
+                StartCoroutine("FinishTP");
+                return;
             }
+
+            if (endGame && SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                SceneManager.LoadScene(8);
+            }
+            
             FaderSceneProgress.progressToNextScene = true;
             GameObject.Find("Fader").GetComponent<Animator>().SetBool("Fading",true);
         }
+        
         Debug.Log("End of conversation.");
+    }
+
+    IEnumerator FinishTP()
+    {
+        AudioSource.PlayClipAtPoint(clip,GameObject.Find("Player").transform.position,1);
+        yield return new WaitForSecondsRealtime(.35f);
+        SceneManager.LoadScene(1);
+        StopCoroutine("FinishTP");
     }
 }

@@ -38,7 +38,7 @@ public class DialogueTrigger : Interaction
             if(!(clip.Length>0)) return;
             AudioSource.PlayClipAtPoint(clip[0],transform.position,1);
         }
-
+        
         if (CompareTag("Finish") && SceneManager.GetActiveScene().buildIndex == 6)
         {
             
@@ -60,6 +60,13 @@ public class DialogueTrigger : Interaction
     protected override void Interact()
     {
         if (!_inRange || !Input.GetButtonDown("Interaction")) return;
+        if (DialogueManager.endGame)
+        {
+            Dialogue dialogue = new Dialogue();
+            dialogue.sentences = new[] {"No nie wierzę! Migdałowe?!"};
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            return;
+        }
         if (CompareTag("Shady") && SceneManager.GetActiveScene().buildIndex == 4)
         {
             Shady_Metro();
@@ -72,6 +79,7 @@ public class DialogueTrigger : Interaction
             return;
         }
         FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
+
         
     }
 
