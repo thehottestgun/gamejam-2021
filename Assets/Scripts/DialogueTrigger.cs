@@ -75,6 +75,7 @@ public class DialogueTrigger : Interaction
         if (PlayerStats.cans < 5)
         {
             Dialogue dialogue = new Dialogue();
+            dialogue.NPCName = "Szemrany Jegomość";
             dialogue.sentences = new[] {"Oj szefuniu, cienko z kasą. Pogadamy jak znajdziesz więcej roppuszek."};
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
