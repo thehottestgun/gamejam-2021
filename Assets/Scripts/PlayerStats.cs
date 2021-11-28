@@ -8,6 +8,7 @@ public static class PlayerStats
     public static int playerHp = 3;
     public static int cans = 5;
     public static int superPower = 0;
+    public static bool isInvisible = false;
     
     public static void StatReset()
     {
@@ -15,5 +16,6 @@ public static class PlayerStats
         playerHp = 3;
         cans = 0;
         superPower = 0;
+        isInvisible = false;
     }
 }

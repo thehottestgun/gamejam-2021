@@ -734,7 +734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145826407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6551297, y: 0.9701625, z: -12}
+  m_LocalPosition: {x: 3.6457627, y: 0.9803244, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2508,7 +2508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _postProcessVolume: {fileID: 0}
-  vignetteSpeed: 0
+  vignetteSpeed: 0.1
   waypoints:
   - {fileID: 479252905}
   - {fileID: 713537101}
@@ -4256,7 +4256,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1691449, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

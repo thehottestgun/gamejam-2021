@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+
+
 
 public class SuperPowers : MonoBehaviour
 {
@@ -10,7 +13,9 @@ public class SuperPowers : MonoBehaviour
     private Vignette _vignette;
     public float vignetteSpeed;
     private int _toogle;
-    public static bool _isInvisible;
+    private bool _isInvisible;
+    [SerializeField] private GameObject[] waypoints;
+
   
 
 
@@ -26,6 +31,7 @@ public class SuperPowers : MonoBehaviour
     {
         if (Input.GetButtonDown("SuperPower"))
         {
+            Invisible();
             if(PlayerStats.superPower==1) // Level 1
                 Invisible();
             else if (PlayerStats.superPower == 2) // Level 2
@@ -41,7 +47,6 @@ public class SuperPowers : MonoBehaviour
             StartCoroutine(ChangeUp());
         else
             StartCoroutine(ChangeDown());
-        
     }
 
     public IEnumerator ChangeUp()
@@ -74,7 +79,13 @@ public class SuperPowers : MonoBehaviour
 
     private void Teleportation()
     {
+        System.Random rnd = new System.Random();
+        var randTarget = rnd.Next(0, waypoints.Length);
+
+        transform.position = new Vector3(waypoints[randTarget].transform.position.x,
+            waypoints[randTarget].transform.position.y, transform.position.z);
         
+
     }
 
 }
