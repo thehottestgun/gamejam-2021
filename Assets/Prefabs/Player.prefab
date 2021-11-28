@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2446172027376247229}
   - component: {fileID: 1747090812}
   - component: {fileID: 1597016067}
+  - component: {fileID: 1747090811}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -78,13 +79,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 808a6e59ecab23b46b8d9d63cfbbdc64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.9, y: 4.6066666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,7 +123,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.9, y: 5.06}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 3.9, y: 4.6066666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -198,3 +199,15 @@ MonoBehaviour:
   _postProcessVolume: {fileID: 0}
   vignetteSpeed: 0.1
   waypoints: []
+--- !u!114 &1747090811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374722123360510214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5554484f1f8bec4e8a212c08914ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
     - "Ech, pora spa\u0107, ale bez kakao nie da rady."
     - "...No nie gadaj, znowu sko\u0144czy\u0142o si\u0119 mleko?"
@@ -461,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
     - "Zimny jak l\xF3d. Cho\u0107 za ten hajs powinienem si\u0119 cieszy\u0107,
       \u017Ce jeszcze nie odpad\u0142 od \u015Bciany."
@@ -939,6 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
+    NPCName: 
     sentences:
     - "We will, we will nya nya... Ah, kocham t\u0119 nutk\u0119"
   clip: []
@@ -1336,7 +1339,7 @@ PrefabInstance:
     - target: {fileID: 8359656294930096748, guid: 11cca5ac56876bd49a150f01fb42d6b3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.45
       objectReference: {fileID: 0}
     - target: {fileID: 8359656294930096748, guid: 11cca5ac56876bd49a150f01fb42d6b3,
         type: 3}
