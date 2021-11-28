@@ -717,7 +717,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1400.56, y: 120.5}
+  m_SizeDelta: {x: 1826.83, y: 275.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197694994
 MonoBehaviour:
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THANK YOU FOR PLAYING
+  m_text: DZIEKI ZA GRE COOMPLU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63257aae70fa9441ead16e5bb869cd6f, type: 2}
   m_sharedMaterial: {fileID: -2040657531419481754, guid: 63257aae70fa9441ead16e5bb869cd6f,
@@ -749,8 +749,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294901883
+  m_fontColor: {r: 0.48390722, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -767,15 +767,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -853,7 +853,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 746.19, y: 513.89}
+  m_SizeDelta: {x: 785.22, y: 577.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248668073
 MonoBehaviour:
@@ -879,8 +879,8 @@ MonoBehaviour:
     s20680\nKajetan Bili\u0144ski s20524\n \nGraphics and design : \nJanina Brejnak-Trzcionkowska
     s21520"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
-  m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
+  m_fontAsset: {fileID: 11400000, guid: 1b3d953104ed94073a030b2ef1d2a00d, type: 2}
+  m_sharedMaterial: {fileID: -5780159602240747197, guid: 1b3d953104ed94073a030b2ef1d2a00d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -905,8 +905,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

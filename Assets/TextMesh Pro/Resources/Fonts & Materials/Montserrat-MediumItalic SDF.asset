@@ -16,8 +16,8 @@ MonoBehaviour:
   material: {fileID: 394279624515450916}
   materialHashCode: 159713888
   m_Version: 1.1.0
-  m_SourceFontFileGUID: 6bac640dc500a40e3aead44f6d033538
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 6bac640dc500a40e3aead44f6d033538,
+  m_SourceFontFileGUID: aa2ea74cd3f374fd6b2c807a465cd315
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: aa2ea74cd3f374fd6b2c807a465cd315,
     type: 3}
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
@@ -2670,7 +2670,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.2
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
@@ -2702,7 +2702,7 @@ Material:
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.18072547, g: 0, b: 0.8962264, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
