@@ -32,7 +32,8 @@ public class SuperPowers : MonoBehaviour
 
     void Start()
     {
-        _postProcessVolume.profile.TryGetSettings(out _vignette);
+        if(PlayerStats.superPower==1)
+            _postProcessVolume.profile.TryGetSettings(out _vignette);
         _sr = gameObject.GetComponent<SpriteRenderer>();
         _spActive = false;
 
