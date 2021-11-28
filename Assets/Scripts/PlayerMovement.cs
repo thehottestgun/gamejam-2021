@@ -76,10 +76,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("JestEnter");
             Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
         }
-        else if(other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
-        }
 
     }
 
@@ -89,10 +85,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("JestStay");
             Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
-        }
-        else if(other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
     }
 
@@ -110,15 +102,9 @@ public class PlayerMovement : MonoBehaviour
             _canJump = true;
             _playerAnimator.SetBool("inAir",false);
         }
-        if (other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
+        if (other.gameObject.CompareTag("Enemy") && !PlayerStats.isInvisible)
         {
-            Debug.Log("JestExit");
             Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
-            
-        }
-        else if(other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
     }
 

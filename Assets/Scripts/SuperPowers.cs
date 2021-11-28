@@ -45,8 +45,8 @@ public class SuperPowers : MonoBehaviour
     {
         if (_toogle == 0)
             StartCoroutine(ChangeUp());
-        else
-            StartCoroutine(ChangeDown());
+        // else
+        //     StartCoroutine(ChangeDown());
     }
 
     public IEnumerator ChangeUp()
@@ -63,19 +63,19 @@ public class SuperPowers : MonoBehaviour
             
     }
 
-    public IEnumerator ChangeDown()
-    {
-        _toogle = -1;
-        while (_vignette.intensity.value>=0)
-        { 
-            _vignette.intensity.value -= vignetteSpeed; 
-            yield return new WaitForSeconds(0.1f);
-        }
-        _toogle = 0;
-        PlayerStats.isInvisible = false;
-        StopCoroutine(ChangeDown());
-            
-    }
+    // public IEnumerator ChangeDown()
+    // {
+    //     _toogle = -1;
+    //     while (_vignette.intensity.value>=0)
+    //     { 
+    //         _vignette.intensity.value -= vignetteSpeed; 
+    //         yield return new WaitForSeconds(0.1f);
+    //     }
+    //     _toogle = 0;
+    //     PlayerStats.isInvisible = false;
+    //     StopCoroutine(ChangeDown());
+    //         
+    // }
 
     private void Teleportation()
     {
