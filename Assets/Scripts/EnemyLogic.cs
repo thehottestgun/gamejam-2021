@@ -44,7 +44,7 @@ public class EnemyLogic : MonoBehaviour
             enemyRangeX = 0.5f;
             enemyRangeY = 1;
         }
-            
+        
     }
 
     private void Chase()
