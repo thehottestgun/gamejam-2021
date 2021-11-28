@@ -2417,15 +2417,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<b>CO I JAK KLIKASZ: </b>\n<color=#FF0000> <- A | D -> </color> aby chyca\u0107
     lewo prawo\n<color=#FF0000> SPACJA </color> na pot\u0119\u017Cne skoki\n<color=#FF0000>
-    F</color> interakcja z otoczeniem\n\nZbieraj super cenne <color=#FF0000> Roppuszki
-    </color>,  uwa\u017Caj na <color=#FF0000>szk\u0142o </color> i przekop\xF3we
-    od <color=#FF0000>Kundlix\xF3w</color>... \n\nPami\u0119taj by nie bra\u0107
-    cukierk\xF3w od obcych! Mog\u0105 powodowa\u0107 efekty niedo\u0107pania i inne
-    <color=#FF0000> supermoce </color> poza twoj\u0105\_kontrol\u0105\n\n...Twoj\u0105
+    F</color> interakcja z otoczeniem\n<color=#FF0000> ENTER</color> przechodzisz
+    dialogi\n\nZbieraj super cenne <color=#FF0000> Roppuszki </color>,  uwa\u017Caj
+    na <color=#FF0000>szk\u0142o </color> i przekop\xF3we od <color=#FF0000>Kundlix\xF3w</color>...
+    \n\nPami\u0119taj by nie bra\u0107 cukierk\xF3w od obcych! Mog\u0105 powodowa\u0107
+    efekty niedo\u0107pania i inne <color=#FF0000> supermoce </color> poza twoj\u0105\_kontrol\u0105\n\n...Twoj\u0105
     misj\u0105.... <color=#0000FF>mleko</color>...."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
-  m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
+  m_fontAsset: {fileID: 11400000, guid: 1b3d953104ed94073a030b2ef1d2a00d, type: 2}
+  m_sharedMaterial: {fileID: -5780159602240747197, guid: 1b3d953104ed94073a030b2ef1d2a00d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
