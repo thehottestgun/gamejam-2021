@@ -740,8 +740,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: THANK YOU FOR PLAYING
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
-  m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
+  m_fontAsset: {fileID: 11400000, guid: 63257aae70fa9441ead16e5bb869cd6f, type: 2}
+  m_sharedMaterial: {fileID: -2040657531419481754, guid: 63257aae70fa9441ead16e5bb869cd6f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -940,7 +940,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.00012195351, w: 0}
+  m_margin: {x: 0, y: 0, z: -541.77905, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
