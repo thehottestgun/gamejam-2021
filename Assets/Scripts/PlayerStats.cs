@@ -18,4 +18,10 @@ public static class PlayerStats
         superPower = 0;
         isInvisible = false;
     }
+
+    public static void GetDamage(int damage)
+    {
+        playerHp -= damage;
+        UIUpdate.instance.SetHp(playerHp);
+    }
 }

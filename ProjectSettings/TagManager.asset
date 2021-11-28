@@ -10,6 +10,8 @@ TagManager:
   - Money
   - Health
   - Shady
+  - Bulldog
+  - Doberman
   layers:
   - Default
   - TransparentFX

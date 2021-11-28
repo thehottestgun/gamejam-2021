@@ -8,9 +8,8 @@ public class BottleLogic : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerStats.playerHp--;
+            PlayerStats.GetDamage(1);
             Destroy(gameObject, 0.5f);
-            UIUpdate.instance.SetHp(PlayerStats.playerHp);
             // placeholder na dzwiek
         }
     }

@@ -25,7 +25,16 @@ public class PlayerAction : MonoBehaviour
             StartCoroutine(ChangeColor());
         }
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Bulldog")||other.gameObject.CompareTag("Doberman"))
+        {
+            StartCoroutine(ChangeColor());
+        }
+    }
+
+
     public IEnumerator ChangeColor()
     {
         for (int i = 1; i < 4; i++)
