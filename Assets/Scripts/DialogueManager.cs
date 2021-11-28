@@ -115,7 +115,7 @@ public class DialogueManager : MonoBehaviour
             GameObject.Find("Fader").GetComponent<Animator>().SetBool("Fading",true);
         }
         
-        if (endGame && SceneManager.GetActiveScene().buildIndex == 1)
+        if (endGame && SceneManager.GetActiveScene().buildIndex == 1 && GameObject.Find("Player").transform.position.x > 3.9 && GameObject.Find("Player").transform.position.x < 4.6)
         {
             SceneManager.LoadScene(8);
         }
