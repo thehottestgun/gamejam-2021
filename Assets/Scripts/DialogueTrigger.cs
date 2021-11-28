@@ -71,6 +71,7 @@ public class DialogueTrigger : Interaction
 
     private void Shady_Metro()
     {
+        Debug.Log(PlayerStats.cans);
         if (PlayerStats.cans < 5)
         {
             Dialogue dialogue = new Dialogue();
@@ -81,7 +82,7 @@ public class DialogueTrigger : Interaction
         else
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
-            PlayerStats.cans = 0;
+            PlayerStats.cans -= 5;
         }
     }
 
