@@ -60,6 +60,12 @@ public class DialogueTrigger : Interaction
             Shady_Metro();
             return;
         }
+
+        if (CompareTag("Shady") && SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            Shady_Goral();
+            return;
+        }
         FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
         
     }
@@ -72,5 +78,14 @@ public class DialogueTrigger : Interaction
             dialogue.sentences = new[] {"Oj szefuniu, cienko z kasą. Pogadamy jak znajdziesz więcej roppuszek."};
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
+        else
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
+        }
+    }
+
+    private void Shady_Goral()
+    {
+        
     }
 }
