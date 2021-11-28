@@ -102,7 +102,7 @@ public class DialogueTrigger : Interaction
 
     private void Shady_Goral()
     {
-        
+        FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
     }
 
     IEnumerator TeleportToFarm()

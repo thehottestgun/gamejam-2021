@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-
+using UnityEngine.SceneManagement;
 
 
 public class SuperPowers : MonoBehaviour
@@ -15,8 +15,19 @@ public class SuperPowers : MonoBehaviour
     private SpriteRenderer _sr;
     [SerializeField] private GameObject[] waypoints;
     private bool _spActive;
-  
 
+
+    private void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            PlayerStats.superPower = 1;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            PlayerStats.superPower = 2;
+        }
+    }
 
     void Start()
     {
