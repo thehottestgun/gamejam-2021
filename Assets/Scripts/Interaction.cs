@@ -19,13 +19,21 @@ public class Interaction : MonoBehaviour
     {
         Debug.Log("In range");
         if (other.CompareTag("Player"))
+        {
+            GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = true;
             _inRange = true;
+        }
+
         
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
+
+            GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = false;
             _inRange = false;
+        }
     }
 }
