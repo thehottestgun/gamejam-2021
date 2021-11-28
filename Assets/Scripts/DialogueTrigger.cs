@@ -82,7 +82,7 @@ public class DialogueTrigger : Interaction
         else
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
-            PlayerStats.cans = 0;
+            PlayerStats.cans -= 5;
         }
     }
 
