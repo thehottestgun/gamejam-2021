@@ -26,12 +26,19 @@ public class DialogueTrigger : Interaction
     private void OnTriggerEnter2D(Collider2D other)
     {
         _inRange = true;
-        GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = true;
+        if (CompareTag("Finish") && SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            
+            StartCoroutine("TeleportToFarm");
+            return;
+        }
+        
         if (CompareTag("Money") && other.CompareTag("Player") && PlayerStats.cans == 1 && SceneManager.GetActiveScene().buildIndex == 2)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
             if(!(clip.Length>0)) return;
             AudioSource.PlayClipAtPoint(clip[0],transform.position,1);
+            return;
         }
 
         if (CompareTag("Health") && SceneManager.GetActiveScene().buildIndex == 2)
@@ -39,14 +46,15 @@ public class DialogueTrigger : Interaction
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
             if(!(clip.Length>0)) return;
             AudioSource.PlayClipAtPoint(clip[0],transform.position,1);
+            return;
         }
+        if(!CompareTag("Finish"))
+            GameObject.Find("InteractionMarker").GetComponent<SpriteRenderer>().enabled = true;
         
-        if (CompareTag("Finish") && SceneManager.GetActiveScene().buildIndex == 6)
-        {
-            
-            StartCoroutine("TeleportToFarm");
-        }
+        
     }
+
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {
