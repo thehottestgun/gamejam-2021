@@ -457,7 +457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NewGame
+  m_text: Nowa Gra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
   m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
@@ -2903,7 +2903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NAME PLACEHOLDER
+  m_text: MLECZNY ODJAZD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63257aae70fa9441ead16e5bb869cd6f, type: 2}
   m_sharedMaterial: {fileID: -2040657531419481754, guid: 63257aae70fa9441ead16e5bb869cd6f,
@@ -3222,7 +3222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: "Wyjd\u017A"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
   m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
