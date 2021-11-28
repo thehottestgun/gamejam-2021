@@ -490,8 +490,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play Again
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
+  m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -715,7 +716,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1296.21, y: 117.34}
+  m_SizeDelta: {x: 1400.56, y: 120.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197694994
 MonoBehaviour:
@@ -739,8 +740,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: THANK YOU FOR PLAYING
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
+  m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -876,8 +878,9 @@ MonoBehaviour:
     s20680\nKajetan Bili\u0144ski s20524\n \nGraphics and design : \nJanina Brejnak-Trzcionkowska
     s21520"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ffd6f35ec2ba94603b949cf5b1ccbd44, type: 2}
+  m_sharedMaterial: {fileID: 394279624515450916, guid: ffd6f35ec2ba94603b949cf5b1ccbd44,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
