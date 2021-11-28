@@ -10,6 +10,7 @@ public class SuperPowers : MonoBehaviour
     private Vignette _vignette;
     public float vignetteSpeed;
     private int _toogle;
+    private bool _isInvisible;
   
 
 
@@ -17,16 +18,20 @@ public class SuperPowers : MonoBehaviour
     {
         _postProcessVolume.profile.TryGetSettings(out _vignette);
         _toogle = 0;
+        _isInvisible = false;
     }
     
     // Update is called once per frame
     void Update()
     {
-        Invisible();
         if(PlayerStats.superPower==1) // Level 1
             Invisible();
         if(PlayerStats.superPower==2) // Level 2
             Teleportation();
+        if (_isInvisible)
+        {
+            
+        }
     }
 
     private void Invisible()
@@ -40,6 +45,11 @@ public class SuperPowers : MonoBehaviour
                 StartCoroutine(ChangeDown());
             
         }
+
+        if (_isInvisible)
+        {
+            
+        }
     }
 
     public IEnumerator ChangeUp()
@@ -51,6 +61,7 @@ public class SuperPowers : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         _toogle = 1;
+        _isInvisible = true;
         StopCoroutine(ChangeUp());
             
     }
@@ -64,6 +75,7 @@ public class SuperPowers : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         _toogle = 0;
+        _isInvisible = false;
         StopCoroutine(ChangeDown());
             
     }
