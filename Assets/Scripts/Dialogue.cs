@@ -8,6 +8,7 @@ public class Dialogue
 {
    [NonSerialized] public string playerName = PlayerStats.name;
     public string NPCName;
+    public AudioClip[] Clips;
     [TextArea(3,10)]
     public string[] sentences;
     
