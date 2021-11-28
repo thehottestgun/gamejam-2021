@@ -41,7 +41,10 @@ public class SuperPowers : MonoBehaviour
 
     private void Invisible()
     {
-        
+        if (_toogle == 0)
+            StartCoroutine(ChangeUp());
+        else
+            StartCoroutine(ChangeDown());
     }
 
     public IEnumerator ChangeUp()
