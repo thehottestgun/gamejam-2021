@@ -13,10 +13,13 @@ public class MusicPlayer : MonoBehaviour
         _audio = GetComponent<AudioSource>();
         PlayMusic();
     }
+
+
     public void PlayMusic()
     {
         if (_audio.isPlaying) return;
         _audio.Play();
     }
+
 
 }
