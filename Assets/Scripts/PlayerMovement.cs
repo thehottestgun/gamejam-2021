@@ -71,11 +71,29 @@ public class PlayerMovement : MonoBehaviour
             _canJump = true;
         }
 
-        if (other.gameObject.layer == 10 && PlayerStats.isInvisible)
+        if (other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
         {
-            Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(),gameObject.GetComponent<Collider>());
+            Debug.Log("JestEnter");
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
+        }
+        else if(other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
 
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
+        {
+            Debug.Log("JestStay");
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
+        }
+        else if(other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -91,6 +109,16 @@ public class PlayerMovement : MonoBehaviour
         {
             _canJump = true;
             _playerAnimator.SetBool("inAir",false);
+        }
+        if (other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
+        {
+            Debug.Log("JestExit");
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
+            
+        }
+        else if(other.gameObject.CompareTag("Enemy") && PlayerStats.isInvisible)
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
     }
 

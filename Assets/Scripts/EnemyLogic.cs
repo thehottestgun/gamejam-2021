@@ -42,7 +42,6 @@ public class EnemyLogic : MonoBehaviour
         if ((Math.Abs(_player.position.x - _enemy.position.x) < enemyRangeX || Math.Abs(_player.position.y - _enemy.position.y) < enemyRangeY)&&_isNotAttacking)
         {
             _an.SetFloat("Speed",speed);
-            Debug.Log("Enemy Chase");
             if (_player.position.x > _enemy.position.x)
             {
                 _enemy.Translate(new Vector2(speed*Time.deltaTime,0));

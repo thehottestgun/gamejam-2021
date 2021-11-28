@@ -58,7 +58,7 @@ public class SuperPowers : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         _toogle = 1;
-        _isInvisible = true;
+        PlayerStats.isInvisible = true;
         StopCoroutine(ChangeUp());
             
     }
@@ -72,7 +72,7 @@ public class SuperPowers : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         _toogle = 0;
-        _isInvisible = false;
+        PlayerStats.isInvisible = false;
         StopCoroutine(ChangeDown());
             
     }
