@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -5345454347810828522}
   - component: {fileID: 2446172027376247229}
   - component: {fileID: 1747090812}
+  - component: {fileID: 1597016067}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2374722123360510214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: -5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 808a6e59ecab23b46b8d9d63cfbbdc64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -182,3 +183,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1597016067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374722123360510214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57dd5f2d10e29c409db93bdbed586b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _postProcessVolume: {fileID: 0}
+  vignetteSpeed: 0.1
+  waypoints: []
