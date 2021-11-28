@@ -685,6 +685,16 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 842555491948783379, guid: 670985dccda473f41a703fecd9f05708,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1920713287585467676, guid: 670985dccda473f41a703fecd9f05708,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2089,6 +2099,22 @@ PrefabInstance:
       propertyPath: Dialogue.sentences.Array.data[2]
       value: "Aj tam godosz, ch\u0142opce, ten z \u017Curawink\u0105 dobrze zrobi,
         trzymaj, hej."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570070083824925675, guid: f6d0786ea87f950439b2120d6b04fe15,
+        type: 3}
+      propertyPath: Dialogue.sentences.Array.data[3]
+      value: "Aj tam godosz, ch\u0142opce, ten z \u017Curawink\u0105 dobrze zrobi,
+        trzymaj, hej."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570070083824925676, guid: f6d0786ea87f950439b2120d6b04fe15,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570070083824925676, guid: f6d0786ea87f950439b2120d6b04fe15,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d0786ea87f950439b2120d6b04fe15, type: 3}
@@ -3582,7 +3608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185983363}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.2, y: 0.09, z: -16.82}
+  m_LocalPosition: {x: -24.2, y: 0.09, z: -16.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4432,7 +4458,7 @@ PrefabInstance:
     - target: {fileID: 3187827735595440004, guid: 8660db2651b2fb4479ddb1a6a291a612,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.2
+      value: -24.2
       objectReference: {fileID: 0}
     - target: {fileID: 3187827735595440004, guid: 8660db2651b2fb4479ddb1a6a291a612,
         type: 3}

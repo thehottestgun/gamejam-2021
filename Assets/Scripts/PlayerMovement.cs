@@ -54,7 +54,8 @@ public class PlayerMovement : MonoBehaviour
     {
         var xDisplacement = Input.GetAxis("Horizontal");
         _playerAnimator.SetFloat("speed",Math.Abs(xDisplacement));
-        _sprite.flipX = xDisplacement < 0;
+        if (xDisplacement < 0) _sprite.flipX = true;
+        else if (xDisplacement > 0) _sprite.flipX = false;
         _rigidbody.velocity = new Vector2(xDisplacement * speed, _rigidbody.velocity.y);
     }
 
