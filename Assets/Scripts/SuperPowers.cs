@@ -12,8 +12,6 @@ public class SuperPowers : MonoBehaviour
     [SerializeField] private PostProcessVolume _postProcessVolume;
     private Vignette _vignette;
     public float vignetteSpeed;
-    private int _toogle;
-    private bool _isInvisible;
     private SpriteRenderer _sr;
     [SerializeField] private GameObject[] waypoints;
     private bool _spActive;
@@ -23,8 +21,6 @@ public class SuperPowers : MonoBehaviour
     void Start()
     {
         _postProcessVolume.profile.TryGetSettings(out _vignette);
-        _toogle = 0;
-        _isInvisible = false;
         _sr = gameObject.GetComponent<SpriteRenderer>();
         _spActive = false;
 
@@ -43,13 +39,10 @@ public class SuperPowers : MonoBehaviour
     private void Invisible()
     {
         StartCoroutine(ChangeUp());
-        // else
-        //     StartCoroutine(ChangeDown());
     }
 
     public IEnumerator ChangeUp()
     {
-        _toogle = -1;
         while (_vignette.intensity.value<=0.7)
         { 
             _vignette.intensity.value += vignetteSpeed; 
@@ -60,27 +53,12 @@ public class SuperPowers : MonoBehaviour
         StopCoroutine(ChangeUp());
             
     }
-
-    // public IEnumerator ChangeDown()
-    // {
-    //     _toogle = -1;
-    //     while (_vignette.intensity.value>=0)
-    //     { 
-    //         _vignette.intensity.value -= vignetteSpeed; 
-    //         yield return new WaitForSeconds(0.1f);
-    //     }
-    //     _toogle = 0;
-    //     PlayerStats.isInvisible = false;
-    //     StopCoroutine(ChangeDown());
-    //         
-    // }
-
     private IEnumerator Teleportation()
     {
         _spActive = true;
         while (true)
         {
-            yield return new WaitForSecondsRealtime(5f);
+            yield return new WaitForSecondsRealtime(4f);
             System.Random rnd = new System.Random();
             var randTarget = rnd.Next(0, waypoints.Length);
 
@@ -88,8 +66,6 @@ public class SuperPowers : MonoBehaviour
                 waypoints[randTarget].transform.position.y, transform.position.z); 
         }
         
-        
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
