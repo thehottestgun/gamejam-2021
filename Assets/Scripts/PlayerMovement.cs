@@ -74,28 +74,6 @@ public class PlayerMovement : MonoBehaviour
             _playerAnimator.SetBool("inAir",false);
             _canJump = true;
         }
-
-        if ((other.gameObject.CompareTag("Bulldog") || other.gameObject.CompareTag("Doberman"))&& PlayerStats.isInvisible)
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
-        }
-        else
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
-        }
-
-    }
-
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if ((other.gameObject.CompareTag("Bulldog") || other.gameObject.CompareTag("Doberman")) && PlayerStats.isInvisible)
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
-        }
-        else
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
-        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
@@ -111,14 +89,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _canJump = true;
             _playerAnimator.SetBool("inAir",false);
-        }
-        if ((other.gameObject.CompareTag("Bulldog") || other.gameObject.CompareTag("Doberman")) && PlayerStats.isInvisible)
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),true);
-        }
-        else
-        {
-            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>(),false);
         }
     }
 
