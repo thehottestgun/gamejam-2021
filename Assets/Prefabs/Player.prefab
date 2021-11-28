@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: -5345454347810828522}
   - component: {fileID: 2446172027376247229}
   - component: {fileID: 1747090812}
-  - component: {fileID: 1597016067}
   - component: {fileID: 1747090811}
+  - component: {fileID: 833538733}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -184,7 +184,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1597016067
+--- !u!114 &1747090811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374722123360510214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5554484f1f8bec4e8a212c08914ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &833538733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,16 +210,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _postProcessVolume: {fileID: 0}
   vignetteSpeed: 0.1
-  waypoints: []
---- !u!114 &1747090811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2374722123360510214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5554484f1f8bec4e8a212c08914ff32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2374722123360510214}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

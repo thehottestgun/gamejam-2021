@@ -7,7 +7,7 @@ public static class PlayerStats
     public static string name = " ";
     public static int playerHp = 3;
     public static int cans = 0;
-    public static int superPower = 0;
+    public static int superPower = 2;
     public static bool isInvisible = false;
     
     public static void StatReset()

@@ -16,7 +16,7 @@ public class SuperPowers : MonoBehaviour
     private bool _isInvisible;
     private SpriteRenderer _sr;
     [SerializeField] private GameObject[] waypoints;
-
+    private bool _spActive;
   
 
 
@@ -26,15 +26,18 @@ public class SuperPowers : MonoBehaviour
         _toogle = 0;
         _isInvisible = false;
         _sr = gameObject.GetComponent<SpriteRenderer>();
-        
+        _spActive = false;
+
     }
     
     // Update is called once per frame
     void Update()
     {
-        Invisible();
-        if (PlayerStats.superPower == 1)
-            StartCoroutine(Teleportation());
+        if(PlayerStats.superPower ==1)
+            Invisible();
+        if (PlayerStats.superPower == 2 && !_spActive)
+            StartCoroutine("Teleportation");
+        
     }
 
     private void Invisible()
@@ -74,9 +77,10 @@ public class SuperPowers : MonoBehaviour
 
     private IEnumerator Teleportation()
     {
+        _spActive = true;
         while (true)
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSecondsRealtime(5f);
             System.Random rnd = new System.Random();
             var randTarget = rnd.Next(0, waypoints.Length);
 
@@ -88,4 +92,11 @@ public class SuperPowers : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            StopCoroutine("Teleportation");
+        }
+    }
 }

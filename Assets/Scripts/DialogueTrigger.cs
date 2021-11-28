@@ -38,6 +38,12 @@ public class DialogueTrigger : Interaction
             if(!(clip.Length>0)) return;
             AudioSource.PlayClipAtPoint(clip[0],transform.position,1);
         }
+
+        if (CompareTag("Finish") && SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            
+            StartCoroutine("TeleportToFarm");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -89,5 +95,14 @@ public class DialogueTrigger : Interaction
     private void Shady_Goral()
     {
         
+    }
+
+    IEnumerator TeleportToFarm()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
+        yield return new WaitForSecondsRealtime(5f);
+        AudioSource.PlayClipAtPoint(clip[1],transform.position,1);
+        SceneManager.LoadScene(7);
     }
 }

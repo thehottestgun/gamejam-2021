@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -81,6 +82,10 @@ public class DialogueManager : MonoBehaviour
         _counter = 0;
         if (name != null)
         {
+            if (SceneManager.GetActiveScene().buildIndex == 7)
+            {
+               
+            }
             FaderSceneProgress.progressToNextScene = true;
             GameObject.Find("Fader").GetComponent<Animator>().SetBool("Fading",true);
         }
