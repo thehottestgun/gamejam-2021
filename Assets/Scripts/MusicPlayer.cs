@@ -11,8 +11,7 @@ public class MusicPlayer : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
         _audio = GetComponent<AudioSource>();
-
-        
+        PlayMusic();
     }
 
 
