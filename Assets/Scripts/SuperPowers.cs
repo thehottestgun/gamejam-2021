@@ -40,7 +40,7 @@ public class SuperPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerStats.superPower ==1)
+        if(PlayerStats.superPower  == 1)
             Invisible();
         if (PlayerStats.superPower == 2 && !_spActive)
             StartCoroutine("Teleportation");
@@ -49,19 +49,20 @@ public class SuperPowers : MonoBehaviour
 
     private void Invisible()
     {
-        StartCoroutine(ChangeUp());
+        StartCoroutine("ChangeUp");
     }
 
     public IEnumerator ChangeUp()
     {
+        yield return new WaitForSecondsRealtime(3f);
         while (_vignette.intensity.value<=0.7)
         { 
             _vignette.intensity.value += vignetteSpeed; 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSecondsRealtime(0.15f);
         }
         _sr.color = new Color(_sr.color.r, _sr.color.g, _sr.color.b, 0.5f);
         PlayerStats.isInvisible = true;
-        StopCoroutine(ChangeUp());
+        StopCoroutine("ChangeUp");
             
     }
     private IEnumerator Teleportation()
