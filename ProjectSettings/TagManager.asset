@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Money
   - Health
+  - Shady
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Money
   - Platform
   - NPC
-  - 
+  - Player
   - 
   - 
   - 
