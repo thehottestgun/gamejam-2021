@@ -49,6 +49,7 @@ public class SuperPowers : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         _sr.color = new Color(_sr.color.r, _sr.color.g, _sr.color.b, 0.5f);
+        PlayerStats.isInvisible = true;
         StopCoroutine(ChangeUp());
             
     }
