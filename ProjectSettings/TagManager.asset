@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Money
   - Health
+  - Shady
   layers:
   - Default
   - TransparentFX

@@ -26,7 +26,7 @@ public class DialogueTrigger : Interaction
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (CompareTag("Money") && other.CompareTag("Player") && PlayerStats.cans == 1)
+        if (CompareTag("Money") && other.CompareTag("Player") && PlayerStats.cans == 1 && SceneManager.GetActiveScene().buildIndex == 2)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
             if(!(clip.Length>0)) return;
@@ -55,8 +55,22 @@ public class DialogueTrigger : Interaction
     protected override void Interact()
     {
         if (!_inRange || !Input.GetButtonDown("Interaction")) return;
-        Debug.Log("Oh boy");
+        if (CompareTag("Shady") && SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            Shady_Metro();
+            return;
+        }
         FindObjectOfType<DialogueManager>().StartDialogue(Dialogue);
         
+    }
+
+    private void Shady_Metro()
+    {
+        if (PlayerStats.cans < 5)
+        {
+            Dialogue dialogue = new Dialogue();
+            dialogue.sentences = new[] {"Oj szefuniu, cienko z kasą. Pogadamy jak znajdziesz więcej roppuszek."};
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        }
     }
 }
