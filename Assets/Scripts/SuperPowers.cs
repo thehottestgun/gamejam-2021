@@ -26,19 +26,15 @@ public class SuperPowers : MonoBehaviour
         _toogle = 0;
         _isInvisible = false;
         _sr = gameObject.GetComponent<SpriteRenderer>();
+        
     }
     
     // Update is called once per frame
     void Update()
     {
         Invisible();
-        if (Input.GetButtonDown("SuperPower"))
-        {
-            if (PlayerStats.superPower == 2) // Level 2
-                Teleportation();
-            else return;
-        }
-        
+        if (PlayerStats.superPower == 1)
+            StartCoroutine(Teleportation());
     }
 
     private void Invisible()
@@ -76,13 +72,18 @@ public class SuperPowers : MonoBehaviour
     //         
     // }
 
-    private void Teleportation()
+    private IEnumerator Teleportation()
     {
-        System.Random rnd = new System.Random();
-        var randTarget = rnd.Next(0, waypoints.Length);
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+            System.Random rnd = new System.Random();
+            var randTarget = rnd.Next(0, waypoints.Length);
 
-        transform.position = new Vector3(waypoints[randTarget].transform.position.x,
-            waypoints[randTarget].transform.position.y, transform.position.z);
+            transform.position = new Vector3(waypoints[randTarget].transform.position.x,
+                waypoints[randTarget].transform.position.y, transform.position.z); 
+        }
+        
         
 
     }
